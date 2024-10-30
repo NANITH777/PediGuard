@@ -3,56 +3,28 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\migrations\\20241030121520_addapplicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:migrations\\20241030121520_addapplicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,76 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241030121520_AddApplicationUser.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Migrations\\20241030121520_AddApplicationUser.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241030121520_AddApplicationUser.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Migrations\\20241030121520_AddApplicationUser.cs",
-              "RelativeToolTip": "Migrations\\20241030121520_AddApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:15:21.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:12:08.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T11:50:40.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T11:20:36.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:18:10.119Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -141,100 +48,74 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T09:48:38.799Z",
+              "WhenOpened": "2024-10-30T13:48:44.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T08:52:11.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T11:34:35.913Z",
+              "WhenOpened": "2024-10-30T13:22:12.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T13:22:06.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:02:30.522Z",
+              "WhenOpened": "2024-10-30T12:51:53.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:24:15.289Z",
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T12:47:44.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Helper\\Helper.cs",
-              "RelativeDocumentMoniker": "Helper\\Helper.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Helper\\Helper.cs",
-              "RelativeToolTip": "Helper\\Helper.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwCcAAABTAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowEcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:27:09.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-30T08:49:31.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwA8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:41:59.198Z",
+              "WhenOpened": "2024-10-30T12:22:25.976Z",
               "EditorCaption": ""
             }
           ]

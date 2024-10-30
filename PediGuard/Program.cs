@@ -10,6 +10,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+    options.Cookie.HttpOnly = true; // Make cookie HTTP only
+    options.Cookie.IsEssential = true; // Required for session to work
+});
 
 var app = builder.Build();
 
@@ -25,8 +31,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
