@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\notify.min.js",
+      "PackagePath": "staticwebassets\\js\\notify.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\script-custom-calendar.js",
+      "PackagePath": "staticwebassets\\js\\script-custom-calendar.js"
+    },
+    {
       "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

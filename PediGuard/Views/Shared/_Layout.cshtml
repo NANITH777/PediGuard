@@ -24,8 +24,20 @@
                     <span class="navbar-toggler-icon"></span>
 
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                @* <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial"/>
+                </div> *@
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Department" asp-action="Index">Department</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
@@ -35,12 +47,18 @@
             @RenderBody()
         </main>
     </div>
+    <footer class="border-top footer" style="background-color: #162466; color: white;">
+        <div class="container text-center">
+            Made With <i class="bi bi-heart-fill"></i> By NANITH
+            &copy; 2024 - PediGuard
+        </div>
+    </footer>
 
-    <footer class="border-top footer text-muted">
+    @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - PediGuard - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

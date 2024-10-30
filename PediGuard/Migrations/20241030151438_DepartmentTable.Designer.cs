@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PediGuard.Models;
 
@@ -11,9 +12,11 @@ using PediGuard.Models;
 namespace PediGuard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241030151438_DepartmentTable")]
+    partial class DepartmentTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -248,32 +251,6 @@ namespace PediGuard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CurrentCapacity = 8,
-                            Name = "Pediatric Emergency",
-                            NumberOfBeds = 10,
-                            ResponsibleDoctorId = 101
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CurrentCapacity = 10,
-                            Name = "Pediatric Intensive Care",
-                            NumberOfBeds = 12,
-                            ResponsibleDoctorId = 102
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CurrentCapacity = 13,
-                            Name = "Pediatric Hematology and Oncology",
-                            NumberOfBeds = 15,
-                            ResponsibleDoctorId = 103
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
