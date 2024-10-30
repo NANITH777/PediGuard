@@ -245,6 +245,502 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\css\\select2.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.css"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\af.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\af.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\af.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\af.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ar.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ar.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ar.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ar.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\az.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\az.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\az.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\az.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bg.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bg.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bg.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bg.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bn.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bn.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bn.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bn.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bs.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bs.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\bs.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\bs.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ca.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ca.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ca.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ca.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\cs.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\cs.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\cs.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\cs.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\da.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\da.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\da.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\da.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\de.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\de.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\de.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\de.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\dsb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\dsb.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\dsb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\dsb.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\el.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\el.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\el.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\el.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\en.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\en.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\en.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\en.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\es.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\es.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\es.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\es.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\et.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\et.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\et.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\et.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\eu.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\eu.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\eu.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\eu.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fa.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fa.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fa.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fa.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fi.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fi.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fr.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\fr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\fr.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\gl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\gl.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\gl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\gl.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\he.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\he.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\he.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\he.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hi.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hi.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hr.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hr.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hsb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hsb.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hsb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hsb.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hu.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hu.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hu.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hu.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hy.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hy.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\hy.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\hy.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\id.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\id.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\id.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\id.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\is.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\is.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\is.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\is.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\it.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\it.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\it.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\it.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ja.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ja.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ja.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ja.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ka.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ka.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ka.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ka.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\km.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\km.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\km.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\km.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ko.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ko.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ko.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ko.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\lt.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lt.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\lt.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lt.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\lv.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lv.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\lv.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\lv.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\mk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\mk.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\mk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\mk.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ms.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ms.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ms.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ms.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\nb.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nb.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\nb.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nb.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ne.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ne.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ne.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ne.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\nl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nl.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\nl.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pl.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pl.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ps.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ps.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ps.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ps.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pt-br.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt-br.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pt-br.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt-br.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pt.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\pt.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\pt.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ro.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ro.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ro.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ro.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ru.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ru.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\ru.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\ru.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sk.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sk.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sl.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sl.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sq.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sq.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sq.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sq.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr-cyrl.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sr-cyrl.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr-cyrl.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sr.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sv.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sv.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\sv.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\sv.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\th.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\th.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\th.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\th.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\tk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tk.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\tk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tk.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\tr.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tr.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\tr.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\tr.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\uk.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\uk.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\uk.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\uk.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\vi.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\vi.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\vi.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\zh-cn.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-cn.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-tw.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\i18n\\zh-tw.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\zh-tw.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\select2.full.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.full.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.full.min.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\select2.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.js"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\lib\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PediGuard.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
