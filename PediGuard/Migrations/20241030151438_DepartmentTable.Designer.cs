@@ -245,7 +245,7 @@ namespace PediGuard.Migrations
                     b.Property<int>("NumberOfBeds")
                         .HasColumnType("int");
 
-                    b.Property<int>("ResponsibleDoctorId")
+                    b.Property<int>("ResponsibleDoctorName")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

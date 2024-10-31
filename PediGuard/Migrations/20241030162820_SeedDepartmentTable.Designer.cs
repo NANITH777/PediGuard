@@ -245,7 +245,7 @@ namespace PediGuard.Migrations
                     b.Property<int>("NumberOfBeds")
                         .HasColumnType("int");
 
-                    b.Property<int>("ResponsibleDoctorId")
+                    b.Property<int>("ResponsibleDoctorName")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -259,7 +259,7 @@ namespace PediGuard.Migrations
                             CurrentCapacity = 8,
                             Name = "Pediatric Emergency",
                             NumberOfBeds = 10,
-                            ResponsibleDoctorId = 101
+                            ResponsibleDoctorName = 101
                         },
                         new
                         {
@@ -267,7 +267,7 @@ namespace PediGuard.Migrations
                             CurrentCapacity = 10,
                             Name = "Pediatric Intensive Care",
                             NumberOfBeds = 12,
-                            ResponsibleDoctorId = 102
+                            ResponsibleDoctorName = 102
                         },
                         new
                         {
@@ -275,7 +275,7 @@ namespace PediGuard.Migrations
                             CurrentCapacity = 13,
                             Name = "Pediatric Hematology and Oncology",
                             NumberOfBeds = 15,
-                            ResponsibleDoctorId = 103
+                            ResponsibleDoctorName = 103
                         });
                 });
 

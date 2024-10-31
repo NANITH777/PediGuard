@@ -19,7 +19,7 @@ namespace PediGuard.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NumberOfBeds = table.Column<int>(type: "int", nullable: false),
                     CurrentCapacity = table.Column<int>(type: "int", nullable: false),
-                    ResponsibleDoctorId = table.Column<int>(type: "int", nullable: false)
+                    ResponsibleDoctorName = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

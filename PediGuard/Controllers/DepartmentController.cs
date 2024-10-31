@@ -20,5 +20,89 @@ namespace PediGuard.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Create(Department obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Departments.Add(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Department created successfully";
+            }
+                
+            //if (obj.Name == obj.DisplayOrder.ToString())
+            //{
+            //    ModelState.AddModelError("name", "The Display order can not exactly match with the Name");
+            //}
+            //if (ModelState.IsValid)
+            //{
+            //    _unitOfWork.Department.Add(obj);
+            //    _unitOfWork.Save();
+            //    TempData["success"] = "Department created successfully";
+            //    return RedirectToAction("Index");
+            //}
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Department? categoryFromDb = _db.Departments.Find(id);
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Department obj)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _db.Departments.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Department updated successfully";
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Department? categoryFromDb = _db.Departments.Find(id);
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeletePost(int? id)
+        {
+            Department? obj = _db.Departments.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            _db.Departments.Remove(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Department deleted successfully";
+            return RedirectToAction("Index");
+        }
     }
 }

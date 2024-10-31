@@ -14,7 +14,7 @@ namespace PediGuard.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Departments",
-                columns: new[] { "Id", "CurrentCapacity", "Name", "NumberOfBeds", "ResponsibleDoctorId" },
+                columns: new[] { "Id", "CurrentCapacity", "Name", "NumberOfBeds", "ResponsibleDoctorName" },
                 values: new object[,]
                 {
                     { 1, 8, "Pediatric Emergency", 10, 101 },
