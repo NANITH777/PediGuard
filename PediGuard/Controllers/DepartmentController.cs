@@ -52,13 +52,13 @@ namespace PediGuard.Controllers
                 return NotFound();
             }
 
-            Department? categoryFromDb = _db.Departments.Find(id);
+            Department? departmentFromDb = _db.Departments.Find(id);
 
-            if (categoryFromDb == null)
+            if (departmentFromDb == null)
             {
                 return NotFound();
             }
-            return View(categoryFromDb);
+            return View(departmentFromDb);
         }
 
         [HttpPost]
@@ -82,13 +82,13 @@ namespace PediGuard.Controllers
                 return NotFound();
             }
 
-            Department? categoryFromDb = _db.Departments.Find(id);
+            Department? departmentFromDb = _db.Departments.Find(id);
 
-            if (categoryFromDb == null)
+            if (departmentFromDb == null)
             {
                 return NotFound();
             }
-            return View(categoryFromDb);
+            return View(departmentFromDb);
         }
 
         [HttpPost, ActionName("Delete")]
