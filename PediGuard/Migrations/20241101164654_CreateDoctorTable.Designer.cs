@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PediGuard.Models;
 
@@ -11,9 +12,11 @@ using PediGuard.Models;
 namespace PediGuard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241101164654_CreateDoctorTable")]
+    partial class CreateDoctorTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -275,77 +278,6 @@ namespace PediGuard.Migrations
                             Name = "Pediatric Hematology and Oncology",
                             NumberOfBeds = 15,
                             ResponsibleDoctorName = "Luss Huguette"
-                        });
-                });
-
-            modelBuilder.Entity("PediGuard.Models.Doctor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Doctors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "123 Main St",
-                            Email = "john.smith@example.com",
-                            FirstName = "John",
-                            IsActive = true,
-                            LastName = "Smith",
-                            Phone = "123-456-7890"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "456 Maple Ave",
-                            Email = "jane.doe@example.com",
-                            FirstName = "Jane",
-                            IsActive = false,
-                            LastName = "Doe",
-                            Phone = "987-654-3210"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "789 Oak Dr",
-                            Email = "alice.brown@example.com",
-                            FirstName = "Alice",
-                            IsActive = true,
-                            LastName = "Brown",
-                            Phone = "555-555-5555"
                         });
                 });
 
