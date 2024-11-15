@@ -1,0 +1,61 @@
+﻿@model Doctor
+
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-primary text-white">Delete Doctor</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body p-4">
+    <form method="post">
+        <div class="border p-3 mt-4">
+            <div class="form-floating py-2 col-12">
+                <input asp-for="LastName" disabled class="form-control border-0 shadow bg-light" />
+                <label asp-for="LastName" class="ms-2"></label>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="FirstName" disabled class="form-control border-0 shadow bg-light" />  @* Tag helper asp-for*@
+                <label asp-for="FirstName" class="ms-2"></label>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Phone" disabled class="form-control border-0 shadow bg-light" />  @* Tag helper asp-for*@
+                <label asp-for="Phone" class="ms-2"></label>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Email" disabled class="form-control border-0 shadow bg-light" />  @* Tag helper asp-for*@
+                <label asp-for="Email" class="ms-2"></label>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Address" disabled class="form-control border-0 shadow bg-light" />  @* Tag helper asp-for*@
+                <label asp-for="Address" class="ms-2"></label>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input type="text"
+                       class="form-control border-0 shadow bg-light"
+                       value="@(Model.IsActive ? "True" : "False")"
+                       disabled />
+                <label class="ms-2">Is Active</label>
+            </div>
+
+
+
+            <div class="row mt-3">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-danger form-control">Delete</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Doctor" asp-action="Index" class="btn btn-secondary border form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
