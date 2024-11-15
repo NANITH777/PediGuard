@@ -13,6 +13,98 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b1-edited.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b1-edited.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b1.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b2-edited.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b2-edited.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b2.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b3-edited.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b3-edited.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b3.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b4.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b4_edi.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b4_edi.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b5-edited.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b5-edited.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b5.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b5.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b6-edited.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b6-edited.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\b6.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\b6.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\bg-1e.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\bg-1e.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\bg-2e.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\bg-2e.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\bg-3e.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\bg-3e.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\bg-4.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\bg-4.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\bg-4e.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\bg-4e.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\dc1.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\dc1.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\dc2.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\dc2.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\dc3.jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\dc3.jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\image_fx_ (10).jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\image_fx_ (10).jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\image_fx_ (11).jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\image_fx_ (11).jpg"
+    },
+    {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\img\\Hospital\\image_fx_ (12).jpg",
+      "PackagePath": "staticwebassets\\img\\Hospital\\image_fx_ (12).jpg"
+    },
+    {
       "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\notify.min.js",
       "PackagePath": "staticwebassets\\js\\notify.min.js"
     },

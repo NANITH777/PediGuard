@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\patient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\patient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\views\\assistant\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\views\\assistant\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,6 +43,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Patient\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Patient\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Patient\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Patient\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T17:27:37.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Assistant\\Delete.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Assistant\\Delete.cshtml",
@@ -51,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DepartmentController.cs",
@@ -59,12 +76,11 @@
               "RelativeToolTip": "Areas\\Admin\\Controllers\\DepartmentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T17:14:08.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T17:14:08.142Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Assistant\\Edit.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Assistant\\Edit.cshtml",
@@ -72,12 +88,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Assistant\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T17:11:37.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T17:11:37.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AssistantController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\AssistantController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AssistantController.cs",
@@ -85,12 +100,11 @@
               "RelativeToolTip": "Areas\\Admin\\Controllers\\AssistantController.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAswEMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:46:41.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T16:46:41.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
@@ -98,8 +112,7 @@
               "RelativeToolTip": "Models\\ApplicationDbContext.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAowHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:43:26.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T16:43:26.361Z"
             }
           ]
         }
