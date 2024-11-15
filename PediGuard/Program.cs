@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PediGuard.Models;
+using PediGuard.Repository;
+using PediGuard.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Make cookie HTTP only
     options.Cookie.IsEssential = true; // Required for session to work
 });
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

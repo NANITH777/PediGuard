@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PediGuard.Models;
+using PediGuard.Repository.IRepository;
 
 namespace PediGuard.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public DepartmentController(ApplicationDbContext db)
+        private readonly IUnitOfWork _unitOfWork;
+        public DepartmentController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Department> objDepartmentList = _db.Departments.ToList();
+            List<Department> objDepartmentList = _unitOfWork.Department.GetAll().ToList();
             return View(objDepartmentList);
         }
 
@@ -26,8 +27,8 @@ namespace PediGuard.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Departments.Add(obj);
-                _db.SaveChanges();
+                _unitOfWork.Department.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Department created successfully";
             }
                 
@@ -52,7 +53,7 @@ namespace PediGuard.Controllers
                 return NotFound();
             }
 
-            Department? departmentFromDb = _db.Departments.Find(id);
+            Department? departmentFromDb = _unitOfWork.Department.Get(u=>u.Id==id);
 
             if (departmentFromDb == null)
             {
@@ -67,8 +68,8 @@ namespace PediGuard.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Departments.Update(obj);
-                _db.SaveChanges();
+                _unitOfWork.Department.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Department updated successfully";
                 return RedirectToAction("Index");
             }
@@ -82,7 +83,7 @@ namespace PediGuard.Controllers
                 return NotFound();
             }
 
-            Department? departmentFromDb = _db.Departments.Find(id);
+            Department? departmentFromDb = _unitOfWork.Department.Get(u => u.Id == id);
 
             if (departmentFromDb == null)
             {
@@ -94,13 +95,13 @@ namespace PediGuard.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
         {
-            Department? obj = _db.Departments.Find(id);
+            Department? obj = _unitOfWork.Department.Get(u => u.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _db.Departments.Remove(obj);
-            _db.SaveChanges();
+            _unitOfWork.Department.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Department deleted successfully";
             return RedirectToAction("Index");
         }
