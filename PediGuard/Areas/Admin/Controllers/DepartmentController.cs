@@ -2,8 +2,9 @@
 using PediGuard.Models;
 using PediGuard.Repository.IRepository;
 
-namespace PediGuard.Controllers
+namespace PediGuard.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class DepartmentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -31,7 +32,7 @@ namespace PediGuard.Controllers
                 _unitOfWork.Save();
                 TempData["success"] = "Department created successfully";
             }
-                
+
             //if (obj.Name == obj.DisplayOrder.ToString())
             //{
             //    ModelState.AddModelError("name", "The Display order can not exactly match with the Name");
@@ -53,7 +54,7 @@ namespace PediGuard.Controllers
                 return NotFound();
             }
 
-            Department? departmentFromDb = _unitOfWork.Department.Get(u=>u.Id==id);
+            Department? departmentFromDb = _unitOfWork.Department.Get(u => u.Id == id);
 
             if (departmentFromDb == null)
             {

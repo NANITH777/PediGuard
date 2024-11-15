@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PediGuard.Models;
 
-namespace PediGuard.Controllers
+namespace PediGuard.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class DoctorController : Controller
     {
-       private readonly ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         public DoctorController(ApplicationDbContext db)
         {
             _db = db;
