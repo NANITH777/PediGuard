@@ -9,6 +9,7 @@ namespace PediGuard.Models
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Assistant> Assistants { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -64,6 +65,46 @@ namespace PediGuard.Models
                     Email = "alice.brown@example.com", 
                     Address = "789 Oak Dr", 
                     IsActive = true 
+                }
+            );
+
+            // Seed data for Assistants
+            modelBuilder.Entity<Assistant>().HasData(
+                new Assistant
+                {
+                    Id = 1,
+                    FullName = "John Doe",
+                    PhoneNumber = "+905340000003",
+                    Email = "john.doe@example.com",
+                    Address = "123 Main St, City A",
+                    Gender = "Male"
+                },
+                new Assistant
+                {
+                    Id = 2,
+                    FullName = "Jane Smith",
+                    PhoneNumber = "+905340000002",
+                    Email = "jane.smith@example.com",
+                    Address = "456 Elm St, City B",
+                    Gender = "Female"
+                },
+                new Assistant
+                {
+                    Id = 3,
+                    FullName = "Alice Johnson",
+                    PhoneNumber = "+905340000001",
+                    Email = "alice.johnson@example.com",
+                    Address = "789 Oak St, City C",
+                    Gender = "Female"
+                },
+                new Assistant
+                {
+                    Id = 4,
+                    FullName = "Robert Brown",
+                    PhoneNumber = "+905340000000",
+                    Email = "robert.brown@example.com",
+                    Address = "321 Pine St, City D",
+                    Gender = "Male"
                 }
             );
         }

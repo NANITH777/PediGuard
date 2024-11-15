@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PediGuard.Models;
 
@@ -11,9 +12,11 @@ using PediGuard.Models;
 namespace PediGuard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241115165939_CreateAssistantTable2")]
+    partial class CreateAssistantTable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -257,44 +260,6 @@ namespace PediGuard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Assistants");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "123 Main St, City A",
-                            Email = "john.doe@example.com",
-                            FullName = "John Doe",
-                            Gender = "Male",
-                            PhoneNumber = "+905340000003"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "456 Elm St, City B",
-                            Email = "jane.smith@example.com",
-                            FullName = "Jane Smith",
-                            Gender = "Female",
-                            PhoneNumber = "+905340000002"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "789 Oak St, City C",
-                            Email = "alice.johnson@example.com",
-                            FullName = "Alice Johnson",
-                            Gender = "Female",
-                            PhoneNumber = "+905340000001"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Address = "321 Pine St, City D",
-                            Email = "robert.brown@example.com",
-                            FullName = "Robert Brown",
-                            Gender = "Male",
-                            PhoneNumber = "+905340000000"
-                        });
                 });
 
             modelBuilder.Entity("PediGuard.Models.Department", b =>
