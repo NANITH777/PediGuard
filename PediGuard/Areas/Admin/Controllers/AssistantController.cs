@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PediGuard.Models;
+using PediGuard.Repository.IRepository;
 
 namespace PediGuard.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class AssistantController : Controller
     {
-        
-        private readonly ApplicationDbContext _db;
-        public AssistantController(ApplicationDbContext db)
+
+        private readonly IUnitOfWork _unitOfWork;
+        public AssistantController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Assistant> objAssistantList = _db.Assistants.ToList();
+            List<Assistant> objAssistantList = _unitOfWork.Assistant.GetAll().ToList();
             return View(objAssistantList);
         }
 
@@ -28,8 +29,8 @@ namespace PediGuard.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Assistants.Add(obj);
-                _db.SaveChanges();
+                _unitOfWork.Assistant.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Assistant created successfully";
             }
             return RedirectToAction("Index");
@@ -42,7 +43,7 @@ namespace PediGuard.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Assistant? assistantFromDb = _db.Assistants.Find(id);
+            Assistant? assistantFromDb = _unitOfWork.Assistant.Get(u => u.Id == id);
 
             if (assistantFromDb == null)
             {
@@ -57,8 +58,8 @@ namespace PediGuard.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Assistants.Update(obj);
-                _db.SaveChanges();
+                _unitOfWork.Assistant.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Assistant updated successfully";
                 return RedirectToAction("Index");
             }
@@ -72,7 +73,7 @@ namespace PediGuard.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Assistant? assistantFromDb = _db.Assistants.Find(id);
+            Assistant? assistantFromDb = _unitOfWork.Assistant.Get(u => u.Id == id);
 
             if (assistantFromDb == null)
             {
@@ -84,13 +85,13 @@ namespace PediGuard.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
         {
-            Assistant? obj = _db.Assistants.Find(id);
+            Assistant? obj = _unitOfWork.Assistant.Get(u => u.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _db.Assistants.Remove(obj);
-            _db.SaveChanges();
+            _unitOfWork.Assistant.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Assistant deleted successfully";
             return RedirectToAction("Index");
         }
