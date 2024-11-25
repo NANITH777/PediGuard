@@ -14,7 +14,7 @@
         <div class="col-6">
         </div>
         <div class="col-6 text-end">
-            <a asp-controller="Nobet" asp-action="Create" class="btn btn-primary">
+            <a asp-controller="Nobet" asp-action="Upsert" class="btn btn-primary">
                 <i class="bi bi-plus-circle"></i> Create New Nobet
             </a>
         </div>
@@ -27,6 +27,8 @@
                 <th>Date</th>
                 <th>Start Time</th>
                 <th>End Time</th>
+                <th>Assistant</th>
+                <th>Department</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -37,15 +39,17 @@
                     <td>@obj.Date.ToString("yyyy-MM-dd")</td>
                     <td>@obj.StartTime.ToString("HH:mm")</td>
                     <td>@obj.EndTime.ToString("HH:mm")</td>
+                    <td>@obj.Assistant.FullName</td> 
+                    <td>@obj.Department.Name</td>
                     <td>
-                        <div class="w-100 btn-group" role="group">
+                        <div class="d-flex justify-content-start">
                             <!-- Edit Button -->
-                            <a asp-controller="Nobet" asp-action="Edit" asp-route-id="@obj.ID" class="btn btn-primary mx-2">
-                                <i class="bi bi-pencil-square"></i>Edit
+                            <a asp-controller="Nobet" asp-action="Upsert" asp-route-id="@obj.ID" class="btn btn-primary mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit this entry">
+                                <i class="bi bi-pencil-square"></i> Edit
                             </a>
-                            <!-- Delete Button -->
-                            <a asp-controller="Nobet" asp-action="Delete" asp-route-id="@obj.ID" class="btn btn-danger mx-2">
-                                <i class="bi bi-trash-fill"></i>Delete
+                            <!-- Delete Button with confirmation -->
+                            <a asp-controller="Nobet" asp-action="Delete" asp-route-id="@obj.ID" class="btn btn-danger mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete this entry">
+                                <i class="bi bi-trash-fill"></i> Delete
                             </a>
                         </div>
                     </td>
@@ -53,4 +57,16 @@
             }
         </tbody>
     </table>
+
+    <!-- Bootstrap 5 script for tooltips -->
+    @section Scripts {
+        <script>
+            // Enable Bootstrap tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+        </script>
+    }
+
 </div>

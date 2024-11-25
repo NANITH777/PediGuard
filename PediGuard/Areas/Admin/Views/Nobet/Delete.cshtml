@@ -13,6 +13,20 @@
 <div class="card-body p-4">
     <form method="post">
         <div class="border p-3 mt-4">
+            <!-- Assistant Field (Display name) -->
+            <div class="form-floating py-2 col-12">
+                <input value="@Model.Assistant.FullName" No Assistant Assigned"""
+                       disabled class="form-control border-0 shadow bg-light" />
+                <label class="ms-2">Assistant</label>
+            </div>
+
+            <!-- Department Field (Display name) -->
+            <div class="form-floating py-2 col-12">
+                <input value="@Model.Department.Name" No Department Assigned"""
+                       disabled class="form-control border-0 shadow bg-light" />
+                <label class="ms-2">Department</label>
+            </div>
+
             <!-- Date Field (Disabled) -->
             <div class="form-floating py-2 col-12">
                 <input asp-for="Date" type="date" disabled class="form-control border-0 shadow bg-light" />

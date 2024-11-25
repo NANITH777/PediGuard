@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PediGuard.Models;
+using PediGuard.Models.ViewModels;
 using PediGuard.Repository.IRepository;
+using System.Runtime.InteropServices;
 
 namespace PediGuard.Areas.Admin.Controllers
 {
@@ -14,57 +18,89 @@ namespace PediGuard.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Nobet> objNobetList = _unitOfWork.Nobet.GetAll().ToList();
+            List<Nobet> objNobetList = _unitOfWork.Nobet
+           .GetAll(includeProperties: "Assistant,Department")
+           .ToList();
             return View(objNobetList);
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        public IActionResult Create(Nobet obj)
+        public IActionResult Upsert(int? id)
         {
-            if (ModelState.IsValid)
+            // Create NobetVM object
+            NobetVM nobetVM = new()
             {
-                _unitOfWork.Nobet.Add(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Nobet created successfully";
-            }
+                // Fetch the list of assistants for the dropdown
+                AssistantList = _unitOfWork.Assistant.GetAll().Select(a => new SelectListItem
+                {
+                    Text = a.FullName,
+                    Value = a.Id.ToString()
+                }),
 
-            return RedirectToAction("Index");
-        }
+                // Fetch the list of departments for the dropdown
+                DepartmentList = _unitOfWork.Department.GetAll().Select(d => new SelectListItem
+                {
+                    Text = d.Name,
+                    Value = d.Id.ToString()
+                }),
 
-        public IActionResult Edit(int? id)
-        {
+                // Initialize a new Nobet object
+                Nobet = new Nobet()
+            };
+
+            // If the ID is null or 0, it's a new record creation
             if (id == null || id == 0)
             {
-                return NotFound();
+                return View(nobetVM);
             }
-
-            Nobet? nobetFromDb = _unitOfWork.Nobet.Get(u => u.ID == id);
-
-            if (nobetFromDb == null)
+            else
             {
-                return NotFound();
+                nobetVM.Nobet = _unitOfWork.Nobet.Get(u => u.ID == id, includeProperties: "Assistant,Department");
+                return View(nobetVM);
             }
-            return View(nobetFromDb);
         }
+
+        
 
         [HttpPost]
-        public IActionResult Edit(Nobet obj)
+        public IActionResult Upsert(NobetVM nobetVM)
         {
-
             if (ModelState.IsValid)
             {
-                _unitOfWork.Nobet.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Nobet updated successfully";
+                if (nobetVM.Nobet.ID == 0)
+                {
+                    _unitOfWork.Nobet.Add(nobetVM.Nobet);  // Add new record if ID is 0
+                }
+                else
+                {
+                    _unitOfWork.Nobet.Update(nobetVM.Nobet);
+                }
+
+                _unitOfWork.Save();  // Save changes to the database
+
+                TempData["success"] = "Nobet created/updated successfully!";
                 return RedirectToAction("Index");
             }
-            return View();
+            else
+            {
+                // Repopulate the dropdown lists if validation fails
+                nobetVM.AssistantList = _unitOfWork.Assistant.GetAll().Select(a => new SelectListItem
+                {
+                    Text = a.FullName,
+                    Value = a.Id.ToString()
+                });
+
+                nobetVM.DepartmentList = _unitOfWork.Department.GetAll().Select(d => new SelectListItem
+                {
+                    Text = d.Name,
+                    Value = d.Id.ToString()
+                });
+
+                return View(nobetVM);
+            }
         }
+
+
 
         public IActionResult Delete(int? id)
         {
@@ -73,7 +109,7 @@ namespace PediGuard.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Nobet? nobetFromDb = _unitOfWork.Nobet.Get(u => u.ID == id);
+            Nobet? nobetFromDb = _unitOfWork.Nobet.Get(u => u.ID == id, includeProperties: "Assistant,Department");
 
             if (nobetFromDb == null)
             {
@@ -81,6 +117,7 @@ namespace PediGuard.Areas.Admin.Controllers
             }
             return View(nobetFromDb);
         }
+
 
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
@@ -90,10 +127,12 @@ namespace PediGuard.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+
             _unitOfWork.Nobet.Remove(obj);
             _unitOfWork.Save();
             TempData["success"] = "Nobet deleted successfully";
             return RedirectToAction("Index");
         }
+
     }
 }

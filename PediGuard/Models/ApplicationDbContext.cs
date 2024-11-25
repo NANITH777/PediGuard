@@ -115,6 +115,8 @@ namespace PediGuard.Models
                 new Nobet
                 {
                     ID = 1,
+                    AssistantID = 4,   // Replace with actual Assistant ID
+                    DepartmentID = 1,   // Replace with actual Department ID
                     Date = new DateTime(2024, 11, 15),
                     StartTime = new DateTime(2024, 11, 15, 8, 0, 0), // 8:00 AM
                     EndTime = new DateTime(2024, 11, 15, 16, 0, 0)   // 4:00 PM
@@ -122,6 +124,8 @@ namespace PediGuard.Models
                 new Nobet
                 {
                     ID = 2,
+                    AssistantID = 5,   // Replace with actual Assistant ID
+                    DepartmentID = 2,   // Replace with actual Department ID
                     Date = new DateTime(2024, 11, 16),
                     StartTime = new DateTime(2024, 11, 16, 9, 0, 0), // 9:00 AM
                     EndTime = new DateTime(2024, 11, 16, 17, 0, 0)   // 5:00 PM
@@ -129,11 +133,14 @@ namespace PediGuard.Models
                 new Nobet
                 {
                     ID = 3,
+                    AssistantID = 1,   // Replace with actual Assistant ID
+                    DepartmentID = 3,   // Replace with actual Department ID
                     Date = new DateTime(2024, 11, 17),
                     StartTime = new DateTime(2024, 11, 17, 10, 0, 0), // 10:00 AM
                     EndTime = new DateTime(2024, 11, 17, 18, 0, 0)    // 6:00 PM
                 }
             );
+
         }
 
 
