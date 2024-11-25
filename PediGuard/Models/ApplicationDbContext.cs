@@ -10,6 +10,7 @@ namespace PediGuard.Models
         public DbSet<Department> Departments { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Assistant> Assistants { get; set; }
+        public DbSet<Nobet> Nobets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -105,6 +106,32 @@ namespace PediGuard.Models
                     Email = "robert.brown@example.com",
                     Address = "321 Pine St, City D",
                     Gender = "Male"
+                }
+            );
+
+
+            // Seed data for Nobets
+            modelBuilder.Entity<Nobet>().HasData(
+                new Nobet
+                {
+                    ID = 1,
+                    Date = new DateTime(2024, 11, 15),
+                    StartTime = new DateTime(2024, 11, 15, 8, 0, 0), // 8:00 AM
+                    EndTime = new DateTime(2024, 11, 15, 16, 0, 0)   // 4:00 PM
+                },
+                new Nobet
+                {
+                    ID = 2,
+                    Date = new DateTime(2024, 11, 16),
+                    StartTime = new DateTime(2024, 11, 16, 9, 0, 0), // 9:00 AM
+                    EndTime = new DateTime(2024, 11, 16, 17, 0, 0)   // 5:00 PM
+                },
+                new Nobet
+                {
+                    ID = 3,
+                    Date = new DateTime(2024, 11, 17),
+                    StartTime = new DateTime(2024, 11, 17, 10, 0, 0), // 10:00 AM
+                    EndTime = new DateTime(2024, 11, 17, 18, 0, 0)    // 6:00 PM
                 }
             );
         }
