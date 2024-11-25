@@ -98,41 +98,53 @@ namespace PediGuard.Areas.Admin.Controllers
 
                 return View(nobetVM);
             }
+
         }
 
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Nobet> objNobetList = _unitOfWork.Nobet
+            .GetAll(includeProperties: "Assistant,Department")
+            .ToList();
+            return Json(new { data = objNobetList });
+        }
 
-
+        [HttpDelete]
         public IActionResult Delete(int? id)
         {
-            if (id == null || id == 0)
+            if (id == null)
             {
-                return NotFound();
+                return NotFound(new { success = false, message = "ID is required" });
             }
 
-            Nobet? nobetFromDb = _unitOfWork.Nobet.Get(u => u.ID == id, includeProperties: "Assistant,Department");
+            var NobetToBeDeleted = _unitOfWork.Nobet.Get(u => u.ID == id);
 
-            if (nobetFromDb == null)
+            if (NobetToBeDeleted == null)
             {
-                return NotFound();
-            }
-            return View(nobetFromDb);
-        }
-
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePost(int? id)
-        {
-            Nobet? obj = _unitOfWork.Nobet.Get(u => u.ID == id);
-            if (obj == null)
-            {
-                return NotFound();
+                return NotFound(new { success = false, message = "Record not found" });
             }
 
-            _unitOfWork.Nobet.Remove(obj);
+            _unitOfWork.Nobet.Remove(NobetToBeDeleted);
             _unitOfWork.Save();
-            TempData["success"] = "Nobet deleted successfully";
-            return RedirectToAction("Index");
+
+            return Ok(new { success = true, message = "Delete successful" });
         }
 
+        //public IActionResult DeletePost(int? id)
+        //{
+        //    Nobet? obj = _unitOfWork.Nobet.Get(u => u.ID == id);
+        //    if (obj == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    _unitOfWork.Nobet.Remove(obj);
+        //    _unitOfWork.Save();
+        //    TempData["success"] = "Nobet deleted successfully";
+        //    return RedirectToAction("Index");
+        //}
+        #endregion
     }
 }
