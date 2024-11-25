@@ -1,0 +1,56 @@
+﻿@model List<Nobet>
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2 ">Nobet List</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body p-4">
+    <div class="row pb-3">
+        <div class="col-6">
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Nobet" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Create New Nobet
+            </a>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(u => u.Date))
+            {
+                <tr>
+                    <td>@obj.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@obj.StartTime.ToString("HH:mm")</td>
+                    <td>@obj.EndTime.ToString("HH:mm")</td>
+                    <td>
+                        <div class="w-100 btn-group" role="group">
+                            <!-- Edit Button -->
+                            <a asp-controller="Nobet" asp-action="Edit" asp-route-id="@obj.ID" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i>Edit
+                            </a>
+                            <!-- Delete Button -->
+                            <a asp-controller="Nobet" asp-action="Delete" asp-route-id="@obj.ID" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash-fill"></i>Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
