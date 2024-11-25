@@ -4,6 +4,7 @@
     {
         IDepartmentRepository Department { get; }
         IAssistantRepository Assistant { get; }
+        INobetRepository Nobet { get; }
         void Save();
     }
 }

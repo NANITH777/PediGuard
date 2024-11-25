@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WEb Projeleri\\PediGuard\\PediGuard\\Migrations\\20241125081704_AddNobetTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241125081704_AddNobetTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,32 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20241125081704_AddNobetTable.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Migrations\\20241125081704_AddNobetTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241125081704_AddNobetTable.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Migrations\\20241125081704_AddNobetTable.cs",
-              "RelativeToolTip": "Migrations\\20241125081704_AddNobetTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:17:05.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAHAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T08:11:36.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Nobet.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\Nobet.cs",
               "RelativeDocumentMoniker": "Models\\Nobet.cs",
@@ -77,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -90,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",

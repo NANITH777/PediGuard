@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PediGuard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8b1efeb76e61d42b966d39b8846a8576d506556")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2a1530078edbbf6fc189b8dd80f8451427e6989")]
 [assembly: System.Reflection.AssemblyProductAttribute("PediGuard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PediGuard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

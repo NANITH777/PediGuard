@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\repository\\nobetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:repository\\nobetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\repository\\irepository\\inobetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:repository\\irepository\\inobetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\repository\\irepository\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:repository\\irepository\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,28 +46,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\UnitOfWork.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\UnitOfWork.cs",
+              "RelativeToolTip": "Repository\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:22:36.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:22:16.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NobetRepository.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\NobetRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\NobetRepository.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\NobetRepository.cs",
+              "RelativeToolTip": "Repository\\NobetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:20:59.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "INobetRepository.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\INobetRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\INobetRepository.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\INobetRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\INobetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:20:04.926Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IDepartmentRepository.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Repository\\IRepository\\IDepartmentRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IDepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:19:51.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T08:11:36.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Nobet.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\Nobet.cs",
               "RelativeDocumentMoniker": "Models\\Nobet.cs",
@@ -55,12 +140,11 @@
               "RelativeToolTip": "Models\\Nobet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:03:08.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T08:03:08.323Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -68,12 +152,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:58:28.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T13:58:28.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
