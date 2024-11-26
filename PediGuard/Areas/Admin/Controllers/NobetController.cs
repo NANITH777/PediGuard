@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PediGuard.Helper;
 using PediGuard.Models;
 using PediGuard.Models.ViewModels;
 using PediGuard.Repository.IRepository;
@@ -9,6 +11,7 @@ using System.Runtime.InteropServices;
 namespace PediGuard.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    
     public class NobetController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -16,6 +19,7 @@ namespace PediGuard.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        [Authorize(Roles = SD.Role_Admin)]
         public IActionResult Index()
         {
             List<Nobet> objNobetList = _unitOfWork.Nobet
@@ -24,7 +28,7 @@ namespace PediGuard.Areas.Admin.Controllers
             return View(objNobetList);
         }
 
-
+        [Authorize(Roles = SD.Role_Admin)]
         public IActionResult Upsert(int? id)
         {
             // Create NobetVM object
@@ -60,7 +64,7 @@ namespace PediGuard.Areas.Admin.Controllers
             }
         }
 
-        
+        [Authorize(Roles = SD.Role_Admin)]
 
         [HttpPost]
         public IActionResult Upsert(NobetVM nobetVM)
@@ -116,6 +120,7 @@ namespace PediGuard.Areas.Admin.Controllers
             return Json(new { data = objNobetList });
         }
 
+        [Authorize(Roles = SD.Role_Admin)]
         [HttpDelete]
         public IActionResult Delete(int? id)
         {

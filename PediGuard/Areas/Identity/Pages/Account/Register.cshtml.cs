@@ -107,6 +107,14 @@ namespace PediGuard.Areas.Identity.Pages.Account
             public string? Role { get; set; }
             [ValidateNever]
             public IEnumerable<SelectListItem> RoleList { get; set; }
+            [Required]
+            public string Name { get; set; }
+            [Required]
+            public string TCno { get; set; }
+
+            public string? PhoneNumber { get; set; }
+            public string? StreetAdress { get; set; }
+            public string? City { get; set; }
         }
 
 
@@ -143,21 +151,28 @@ namespace PediGuard.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.StressAdress = Input.StreetAdress;
+                user.Name = Input.Name;
+                user.City = Input.City;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.TCno = Input.TCno;
 
-                if (!String.IsNullOrEmpty(Input.Role))
-                {
-                    await _userManager.AddToRoleAsync(user, Input.Role);
-                }
-                else
-                {
-                    await _userManager.AddToRoleAsync(user, SD.Role_Patient);
-                }
-
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+
+                    if (!String.IsNullOrEmpty(Input.Role))
+                    {
+                        await _userManager.AddToRoleAsync(user, Input.Role);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.Role_Patient);
+                    }
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -195,13 +210,13 @@ namespace PediGuard.Areas.Identity.Pages.Account
         {
             try
             {
-                return Activator.CreateInstance<ApplicationUser>();
+                var user = new ApplicationUser();
+                user.Id = Guid.NewGuid().ToString(); 
+                return user;
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
-                    $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
-                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'.");
             }
         }
 
