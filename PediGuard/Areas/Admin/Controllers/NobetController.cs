@@ -101,6 +101,11 @@ namespace PediGuard.Areas.Admin.Controllers
 
         }
 
+        public IActionResult Calendar()
+        {
+            return View();
+        }
+
         #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
@@ -130,6 +135,58 @@ namespace PediGuard.Areas.Admin.Controllers
             _unitOfWork.Save();
 
             return Ok(new { success = true, message = "Delete successful" });
+        }
+
+        //[HttpGet]
+        //public IActionResult GetAllNobet()
+        //{
+        //    var nobetList = _unitOfWork.Nobet.GetAll(includeProperties: "Assistant,Department")
+        //        .Select(n => new
+        //        {
+        //            id = n.ID,
+        //            title = $"{n.Assistant.FullName} - {n.Department.Name}",
+        //            start = n.Date.Add(n.StartTime.TimeOfDay),
+        //            end = n.Date.Add(n.EndTime.TimeOfDay),
+        //        }).ToList();
+
+        //    Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(nobetList)); // Log des données
+        //    return Json(nobetList);
+        //}
+
+        [HttpGet]
+        public IActionResult GetAllNobet()
+        {
+            try
+            {
+                var nobetList = _unitOfWork.Nobet.GetAll(includeProperties: "Assistant,Department")
+                    .Select(n => new
+                    {
+                        id = n.ID,
+                        title = $"{n.Assistant?.FullName ?? "Unknown"} - {n.Department?.Name ?? "Unknown"}",
+                        start = n.Date.Add(n.StartTime.TimeOfDay).ToString("yyyy-MM-dd'T'HH:mm:ss"),
+                        end = n.Date.Add(n.EndTime.TimeOfDay).ToString("yyyy-MM-dd'T'HH:mm:ss"),
+                        color = GetColorForDepartment(n.Department?.Name)
+                    })
+                    .ToList();
+
+                return Json(nobetList);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, new { message = "Error retrieving Nobet data", details = ex.Message });
+            }
+        }
+
+        private string GetColorForDepartment(string departmentName)
+        {
+            return departmentName switch
+            {
+                "Emergency" => "#FF6B6B",
+                "Pediatrics" => "#4ECDC4",
+                "Cardiology" => "#45B7D1",
+                _ => "#6A5ACD"
+            };
         }
 
         //public IActionResult DeletePost(int? id)
