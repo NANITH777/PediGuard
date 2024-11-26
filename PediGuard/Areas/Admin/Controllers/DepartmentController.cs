@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using PediGuard.Helper;
 using PediGuard.Models;
 using PediGuard.Repository.IRepository;
 
 namespace PediGuard.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class DepartmentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

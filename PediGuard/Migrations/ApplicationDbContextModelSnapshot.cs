@@ -256,7 +256,7 @@ namespace PediGuard.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Assistants");
+                    b.ToTable("Assistants", (string)null);
 
                     b.HasData(
                         new
@@ -322,7 +322,7 @@ namespace PediGuard.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
 
                     b.HasData(
                         new
@@ -387,7 +387,7 @@ namespace PediGuard.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctors", (string)null);
 
                     b.HasData(
                         new
@@ -451,7 +451,7 @@ namespace PediGuard.Migrations
 
                     b.HasIndex("DepartmentID");
 
-                    b.ToTable("Nobets");
+                    b.ToTable("Nobets", (string)null);
 
                     b.HasData(
                         new

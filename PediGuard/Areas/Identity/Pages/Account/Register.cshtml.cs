@@ -15,9 +15,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using PediGuard.Helper;
 using PediGuard.Models;
 
 namespace PediGuard.Areas.Identity.Pages.Account
@@ -25,6 +28,7 @@ namespace PediGuard.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
@@ -33,12 +37,14 @@ namespace PediGuard.Areas.Identity.Pages.Account
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
@@ -98,11 +104,31 @@ namespace PediGuard.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            public string? Role { get; set; }
+            [ValidateNever]
+            public IEnumerable<SelectListItem> RoleList { get; set; }
         }
 
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            if (!_roleManager.RoleExistsAsync(SD.Role_Patient).GetAwaiter().GetResult())
+            {
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_Patient)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_Assistant)).GetAwaiter().GetResult();
+            }
+
+            Input = new()
+            {
+                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                {
+                    Text = i,
+                    Value = i
+
+                })
+            };
+
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -117,6 +143,16 @@ namespace PediGuard.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+                if (!String.IsNullOrEmpty(Input.Role))
+                {
+                    await _userManager.AddToRoleAsync(user, Input.Role);
+                }
+                else
+                {
+                    await _userManager.AddToRoleAsync(user, SD.Role_Patient);
+                }
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

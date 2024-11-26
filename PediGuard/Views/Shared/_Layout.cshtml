@@ -37,30 +37,32 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="Patient" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        @if(User.IsInRole(SD.Role_Admin))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MANAGEMENT
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Department" asp-action="Index">Department</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Doctor" asp-action="Index">Doctor</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Assistant" asp-action="Index">Assistant</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Nobet" asp-action="Index">Nobet</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Nobet" asp-action="Calendar">Nobet Scheduler</a>
+                                    </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MANAGEMENT
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Department" asp-action="Index">Department</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Doctor" asp-action="Index">Doctor</a>                                                                                                                  
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Assistant" asp-action="Index">Assistant</a>                                                                                                                  
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Nobet" asp-action="Index">Nobet</a>                                                                                                                   
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Nobet" asp-action="Calendar">Nobet Scheduler</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>
+                        }                       
                      
                     </ul>
                     <partial name="_LoginPartial" />

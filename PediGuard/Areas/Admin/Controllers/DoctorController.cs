@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using PediGuard.Helper;
 using PediGuard.Models;
 
 namespace PediGuard.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class DoctorController : Controller
     {
         private readonly ApplicationDbContext _db;
