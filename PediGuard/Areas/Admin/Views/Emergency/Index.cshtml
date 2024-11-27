@@ -1,69 +1,12 @@
-﻿@* @model List<Emergency>
+﻿@model List<Emergency>
 
 <div class="container mt-4">
-    <div class="card shadow-lg border-0">
-        <div class="card-header bg-primary text-white text-center">
-            <h2 class="mb-0">Emergency List</h2>
-        </div>
-        <div class="card-body">
-            <div class="row mb-3">
-                <div class="col-6">
-                    <!-- Optional: Add filters or search functionality here -->
-                </div>
-                <div class="col-6 text-end">
-                    <a asp-controller="Emergency" asp-action="Upsert" class="btn btn-success">
-                        <i class="bi bi-plus-circle"></i> Create New Emergency
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach (var emergency in Model.OrderBy(e => e.CreatedAt))
-                {
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">@emergency.Description</h5>
-                                <p class="card-text">
-                                    <strong>Date and Time:</strong> @emergency.CreatedAt.ToString("yyyy-MM-dd HH:mm")<br>
-                                    <strong>Location:</strong> @emergency.Location<br>
-                                    <strong>Status:</strong> <span class="badge bg-info text-dark">@emergency.Status</span><br>
-                                    <strong>Department:</strong> @emergency.Department?.Name ?? "N/A"
-                                </p>
-                                <div class="d-flex justify-content-between">
-                                    <a asp-controller="Emergency" asp-action="Upsert" asp-route-id="@emergency.Id" class="btn btn-outline-primary">
-                                        <i class="bi bi-pencil-square"></i> Edit
-                                    </a>
-                                    <a href="javascript:void(0);" class="btn btn-outline-danger delete-btn" data-id="@emergency.Id">
-                                        <i class="bi bi-trash-fill"></i> Delete
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="mb-4">Emergency List</h2>
         </div>
     </div>
-</div>
-
-@section Scripts {
-    <script src="~/js/emergency.js"></script>
-} *@
-
-@model List<Emergency>
-
-<div class="card shadow border-0 mt-4">
-    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="text-white py-2">Emergency List</h2>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card-body p-4">
-    <div class="row pb-3">
+    <div class="row mb-3">
         <div class="col-6">
             <!-- Optional: Add filters or search functionality here -->
         </div>
@@ -73,22 +16,51 @@
             </a>
         </div>
     </div>
+    <div class="row">
+        @foreach (var emergency in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@emergency.Description</h5>
+                        <p class="card-text"><strong>Location:</strong> @emergency.Location</p>
+                        <p class="card-text"><strong>Status:</strong> @emergency.Status</p>
+                        <p class="card-text"><strong>Department:</strong> @emergency.Department.Name</p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#detailsModal-@emergency.Id">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    <table id="tblData" class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Date and Time</th>
-                <th>Description</th>
-                <th>Location</th>
-                <th>Status</th>
-                <th>Department</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be populated by DataTables -->
-        </tbody>
-    </table>
+            <!-- Modal -->
+            <div class="modal fade" id="detailsModal-@emergency.Id" tabindex="-1" aria-labelledby="detailsModalLabel-@emergency.Id" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detailsModalLabel-@emergency.Id">Emergency Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Date and Time:</strong> @emergency.CreatedAt</p>
+                            <p><strong>Description:</strong> @emergency.Description</p>
+                            <p><strong>Location:</strong> @emergency.Location</p>
+                            <p><strong>Status:</strong> @emergency.Status</p>
+                            <p><strong>Department:</strong> @emergency.Department.Name</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a asp-controller="Emergency" asp-action="Upsert" asp-route-id="@emergency.Id" class="btn btn-primary">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                            <button type="button" class="btn btn-danger" onclick="Delete('/Admin/Emergency/Delete/@emergency.Id')">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 
     @section Scripts {
         <script src="~/js/emergency.js"></script>
