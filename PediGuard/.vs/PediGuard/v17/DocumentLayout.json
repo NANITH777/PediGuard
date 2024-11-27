@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\patient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\patient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\controllers\\nobetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\controllers\\nobetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\wwwroot\\js\\script-custom-calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:wwwroot\\js\\script-custom-calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\views\\nobet\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\views\\nobet\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +30,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Patient\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Patient\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Patient\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Patient\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAASwDsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:56:09.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:55:56.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Calendar.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:49:00.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAD4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T17:39:59.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DoctorController.cs",
-              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\DoctorController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DoctorController.cs",
-              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\DoctorController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\DoctorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:39:42.864Z",
+              "Title": "script-custom-calendar.js",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\script-custom-calendar.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\script-custom-calendar.js",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\script-custom-calendar.js",
+              "RelativeToolTip": "wwwroot\\js\\script-custom-calendar.js",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAOYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-27T12:16:13.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Calendar.cshtml",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAALsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T11:33:42.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "NobetController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\NobetController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\NobetController.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\NobetController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\NobetController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwBUAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAswK0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T17:39:34.224Z",
               "EditorCaption": ""

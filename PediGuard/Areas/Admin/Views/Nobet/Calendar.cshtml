@@ -1,17 +1,24 @@
 ﻿@model List<Nobet>
 <div class="container-fluid">
+    
     <div class="card shadow-lg border-0 mt-4">
         <div class="card-header bg-primary bg-gradient text-white">
             <div class="d-flex justify-content-between align-items-center">
-                <a asp-controller="Nobet" asp-action="Index" class="btn btn-outline-light">
-                    <i class="bi bi-arrow-left me-2"></i>Back to List
-                </a>
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <a asp-controller="Nobet" asp-action="Index" class="btn btn-outline-light">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                }
                 <h2 class="text-center flex-grow-1 mb-0">
                     <i class="bi bi-calendar-check me-2"></i>Shift Scheduling
                 </h2>
-                <button id="addNewSchedule" class="btn btn-outline-light">
-                    <i class="bi bi-plus-circle me-2"></i>New Shift
-                </button>
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <button id="addNewSchedule" class="btn btn-outline-light">
+                        <i class="bi bi-plus-circle me-2"></i>New Shift
+                    </button>
+                }
             </div>
         </div>
 
@@ -80,78 +87,120 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'timeGridWeek',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: '@Url.Action("GetAllNobet", "Nobet")',
-                eventClick: function (info) {
-                    Swal.fire({
-                        title: 'Shift Details',
-                        html: `
-                                            <div class="text-start">
-                                                <p><strong>Title:</strong> ${info.event.title}</p>
-                                                <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
-                                                <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
-                                            </div>
-                                        `,
-                        icon: 'info',
-                        showCancelButton: true,
-                        confirmButtonText: 'Edit',
-                        cancelButtonText: 'Close'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Shift editing logic
-                            window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
+        function InitializeCalendar() {
+            try {
+                var calendarEl = document.getElementById('calendar');
+                if (calendarEl != null) 
+                {
+                    calendar = new FullCalendar.Calendar(calendarEl, {
+                                initialView: 'timeGridWeek',
+                        headerToolbar: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        },
+                        events: '@Url.Action("GetAllNobet", "Nobet")',
+                        events: '@Url.Action("GetAllNobet", "Nobet")',
+                        eventClick: function (info) {
+                            // Check if the current user is an admin
+                            var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
+
+                            var alertConfig = {
+                                title: 'Shift Details',
+                                html: `
+                            <div class="text-start">
+                                <p><strong>Title:</strong> ${info.event.title}</p>
+                                <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
+                                <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
+                            </div>
+                        `,
+                                icon: 'info',
+                                showCancelButton: true,
+                                cancelButtonText: 'Close'
+                            };
+
+                            // Conditionally add the confirm button only for admins
+                            if (isAdmin) {
+                                alertConfig.confirmButtonText = 'Edit';
+                                alertConfig.showConfirmButton = true;
+                            } else {
+                                alertConfig.showConfirmButton = false;
+                            }
+
+                            Swal.fire(alertConfig).then((result) => {
+                                if (result.isConfirmed && isAdmin) {
+                                    // Shift editing logic - only accessible to admins
+                                    window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
+                                }
+                            });
+                        },
+                        dateClick: function (info) {
+                            var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
+                            var alertConfig = {
+                                title: 'New Shift',
+                                text: `Do you want to create a new shift for ${info.dateStr}?`,
+                                icon: 'question',
+                                showCancelButton: true,
+                                cancelButtonText: 'Cancel'
+                            };
+
+                            if (isAdmin) {
+                                alertConfig.confirmButtonText = 'Create';
+                                alertConfig.showConfirmButton = true;
+                            } else {
+                                alertConfig.showConfirmButton = false;
+                                alertConfig.text = `Shift creation is restricted to administrators for ${info.dateStr}`;
+                            }
+
+                            Swal.fire(alertConfig).then((result) => {
+                                if (result.isConfirmed && isAdmin) {
+                                    var formattedDate = new Date(info.dateStr).toISOString();
+                                    var url = '@Url.Action("Upsert", "Nobet")?date=' + formattedDate;
+                                    console.log(url);
+                                    window.location.href = url;
+                                }
+                            });
+                        },
+                        height: 'auto',
+                        expandRows: true,
+                        slotMinTime: '06:00:00',
+                        slotMaxTime: '22:00:00',
+                        eventColor: '#007bff',
+                        eventTextColor: 'white',
+                        businessHours: {
+                            daysOfWeek: [1, 2, 3, 4, 5],
+                            startTime: '09:00',
+                            endTime: '17:00'
                         }
                     });
-                },
-                dateClick: function (info) {
-                    Swal.fire({
-                        title: 'New Shift',
-                        text: `Do you want to create a new shift for ${info.dateStr}?`,
-                        icon: 'question',
-                        showCancelButton: true,
-                        confirmButtonText: 'Create',
-                        cancelButtonText: 'Cancel'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.href = `/Nobet/Upsert?date=${info.dateStr}`;
-                        }
-                    });
-                },
-                height: 'auto',
-                expandRows: true,
-                slotMinTime: '06:00:00',
-                slotMaxTime: '22:00:00',
-                eventColor: '#007bff',
-                eventTextColor: 'white',
-                businessHours: {
-                    daysOfWeek: [1, 2, 3, 4, 5],
-                    startTime: '09:00',
-                    endTime: '17:00'
+                    calendar.render();
                 }
+            }
+            catch (e) {
+                console.error("Calendar initialization error:", e);
+            }
+        }
+        // Filters
+        document.getElementById('departmentFilter').addEventListener('change', function () {
+            calendar.getEvents().forEach(function (event) {
+                var departmentFilter = document.getElementById('departmentFilter').value;
+                event.remove();
             });
-            calendar.render();
+            calendar.refetchEvents();
+        });
 
-            // Filters
-            document.getElementById('departmentFilter').addEventListener('change', function () {
-                calendar.getEvents().forEach(function (event) {
-                    var departmentFilter = document.getElementById('departmentFilter').value;
-                    event.remove();
-                });
-                calendar.refetchEvents();
-            });
-
-            // New Shift button
-            document.getElementById('addNewSchedule').addEventListener('click', function () {
+        // New Shift button
+        var addNewScheduleButton = document.getElementById('addNewSchedule');
+        if (addNewScheduleButton) {
+            addNewScheduleButton.addEventListener('click', function () {
                 window.location.href = '@Url.Action("Upsert", "Nobet")';
             });
+        } else {
+            console.log('"New Shift" n\'is not available');
+        }
+
+        $(document).ready(function () {
+            InitializeCalendar();
         });
     </script>
 }
