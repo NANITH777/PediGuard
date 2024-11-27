@@ -142,22 +142,6 @@ namespace PediGuard.Areas.Admin.Controllers
             return Ok(new { success = true, message = "Delete successful" });
         }
 
-        //[HttpGet]
-        //public IActionResult GetAllNobet()
-        //{
-        //    var nobetList = _unitOfWork.Nobet.GetAll(includeProperties: "Assistant,Department")
-        //        .Select(n => new
-        //        {
-        //            id = n.ID,
-        //            title = $"{n.Assistant.FullName} - {n.Department.Name}",
-        //            start = n.Date.Add(n.StartTime.TimeOfDay),
-        //            end = n.Date.Add(n.EndTime.TimeOfDay),
-        //        }).ToList();
-
-        //    Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(nobetList)); // Log des données
-        //    return Json(nobetList);
-        //}
-
         [HttpGet]
         public IActionResult GetAllNobet()
         {
@@ -193,20 +177,6 @@ namespace PediGuard.Areas.Admin.Controllers
                 _ => "#6A5ACD"
             };
         }
-
-        //public IActionResult DeletePost(int? id)
-        //{
-        //    Nobet? obj = _unitOfWork.Nobet.Get(u => u.ID == id);
-        //    if (obj == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _unitOfWork.Nobet.Remove(obj);
-        //    _unitOfWork.Save();
-        //    TempData["success"] = "Nobet deleted successfully";
-        //    return RedirectToAction("Index");
-        //}
         #endregion
     }
 }

@@ -38,8 +38,7 @@
               "RelativeToolTip": "wwwroot\\js\\script-custom-calendar.js",
               "ViewState": "AgIAAFsAAAAAAAAAAAAAAOYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-27T12:16:13.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T12:16:13.579Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Nobet\\Calendar.cshtml",
               "ViewState": "AgIAALUAAAAAAAAAAAAAALsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T11:33:42.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T11:33:42.965Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\NobetController.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\NobetController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\NobetController.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAswK0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T17:39:34.224Z",
               "EditorCaption": ""
