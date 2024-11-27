@@ -11,6 +11,7 @@ namespace PediGuard.Models
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Assistant> Assistants { get; set; }
         public DbSet<Nobet> Nobets { get; set; }
+        public DbSet<Emergency> Emergencies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -138,6 +139,40 @@ namespace PediGuard.Models
                     Date = new DateTime(2024, 11, 17),
                     StartTime = new DateTime(2024, 11, 17, 10, 0, 0), // 10:00 AM
                     EndTime = new DateTime(2024, 11, 17, 18, 0, 0)    // 6:00 PM
+                }
+            );
+
+            // Seed data for Emergencies
+            modelBuilder.Entity<Emergency>().HasData(
+                new Emergency
+                {
+                    Id = 1,
+                    Description = "Fire in the emergency room",
+                    Location = "Emergency Room 1",
+                    Status = "Pending",
+                    DepartmentId = 1,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
+                },
+                new Emergency
+                {
+                    Id = 2,
+                    Description = "Child with severe asthma attack",
+                    Location = "Pediatrics Ward",
+                    Status = "In Progress",
+                    DepartmentId = 2,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
+                },
+                new Emergency
+                {
+                    Id = 3,
+                    Description = "Power outage in the hospital",
+                    Location = "Main Building",
+                    Status = "Resolved",
+                    DepartmentId = 1,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
                 }
             );
 

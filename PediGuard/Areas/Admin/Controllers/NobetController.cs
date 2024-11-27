@@ -59,7 +59,7 @@ namespace PediGuard.Areas.Admin.Controllers
             }
             else
             {
-                nobetVM.Nobet = _unitOfWork.Nobet.Get(u => u.ID == id, includeProperties: "Assistant,Department");
+                nobetVM.Nobet = _unitOfWork.Nobet.Get(u => u.ID == id);
                 return View(nobetVM);
             }
         }

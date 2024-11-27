@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\img\\Hospital\\image_fx_ (12).jpg"
     },
     {
+      "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\emergency.js",
+      "PackagePath": "staticwebassets\\js\\emergency.js"
+    },
+    {
       "Id": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\nobet.js",
       "PackagePath": "staticwebassets\\js\\nobet.js"
     },

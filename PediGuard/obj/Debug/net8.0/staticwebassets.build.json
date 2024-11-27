@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WwtqeDBYeJDgT+ZCfUusGxDWupuzW6fGZGTAV53jUxo=",
+  "Hash": "QNST7bEK+B6H0NqFspXb2XGZR0w6Mxf6z5ukOA9yA94=",
   "Source": "PediGuard",
   "BasePath": "_content/PediGuard",
   "Mode": "Default",
@@ -1668,6 +1668,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Hospital\\image_fx_ (12).jpg"
+    },
+    {
+      "Identity": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\emergency.js",
+      "SourceId": "PediGuard",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\",
+      "BasePath": "_content/PediGuard",
+      "RelativePath": "js/emergency.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\emergency.js"
     },
     {
       "Identity": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\nobet.js",

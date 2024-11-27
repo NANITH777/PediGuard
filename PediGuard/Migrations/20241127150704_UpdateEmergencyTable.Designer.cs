@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PediGuard.Models;
 
@@ -11,9 +12,11 @@ using PediGuard.Models;
 namespace PediGuard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241127150704_UpdateEmergencyTable")]
+    partial class UpdateEmergencyTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -469,38 +472,6 @@ namespace PediGuard.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Emergencies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9126),
-                            DepartmentId = 1,
-                            Description = "Fire in the emergency room",
-                            Location = "Emergency Room 1",
-                            Status = "Pending",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9126)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9128),
-                            DepartmentId = 2,
-                            Description = "Child with severe asthma attack",
-                            Location = "Pediatrics Ward",
-                            Status = "In Progress",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9129)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9131),
-                            DepartmentId = 1,
-                            Description = "Power outage in the hospital",
-                            Location = "Main Building",
-                            Status = "Resolved",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9131)
-                        });
                 });
 
             modelBuilder.Entity("PediGuard.Models.Nobet", b =>
