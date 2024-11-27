@@ -8,5 +8,12 @@ namespace PediGuard.Models.ViewModels
         public Emergency Emergency { get; set; }
         [ValidateNever]
         public IEnumerable<SelectListItem> DepartmentList { get; set; }
+        public EmergencyVM()
+        {
+            Emergency = new Emergency
+            {
+                Status = "Pending"
+            };
+        }
     }
 }

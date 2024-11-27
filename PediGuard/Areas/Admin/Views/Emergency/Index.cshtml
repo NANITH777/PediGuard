@@ -8,7 +8,30 @@
     </div>
     <div class="row mb-3">
         <div class="col-6">
-            <!-- Optional: Add filters or search functionality here -->
+            <div class="input-group mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by description or location" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="button" onclick="filterEmergencies()">Search</button>
+            </div>
+            <div class="mb-3">
+                <label for="statusFilter" class="form-label">Filter by Status</label>
+                <select id="statusFilter" class="form-select" onchange="filterEmergencies()">
+                    <option value="">All</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div>
+                <label for="departmentFilter" class="form-label">Filter by Department</label>
+                <select id="departmentFilter" class="form-select" onchange="filterEmergencies()">
+                    <option value="">All</option>
+                    @foreach (var department in Model.Select(e => e.Department).Distinct())
+                    {
+                        <option value="@department.Name">@department.Name</option>
+                    }
+                </select>
+            </div>
         </div>
         <div class="col-6 text-end">
             <a asp-controller="Emergency" asp-action="Upsert" class="btn btn-primary">
@@ -16,15 +39,20 @@
             </a>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="emergencyList">
         @foreach (var emergency in Model)
         {
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 emergency-item" data-description="@emergency.Description" data-location="@emergency.Location" data-status="@emergency.Status" data-department="@emergency.Department.Name">
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">@emergency.Description</h5>
                         <p class="card-text"><strong>Location:</strong> @emergency.Location</p>
-                        <p class="card-text"><strong>Status:</strong> @emergency.Status</p>
+                        <p class="card-text">
+                            <strong>Status:</strong>
+                            <span class="badge" id="status-@emergency.Id">
+                                @emergency.Status
+                            </span>
+                        </p>
                         <p class="card-text"><strong>Department:</strong> @emergency.Department.Name</p>
                         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#detailsModal-@emergency.Id">
                             View Details
@@ -45,7 +73,12 @@
                             <p><strong>Date and Time:</strong> @emergency.CreatedAt</p>
                             <p><strong>Description:</strong> @emergency.Description</p>
                             <p><strong>Location:</strong> @emergency.Location</p>
-                            <p><strong>Status:</strong> @emergency.Status</p>
+                            <p>
+                                <strong>Status:</strong>
+                                <span class="badge" id="modal-status-@emergency.Id">
+                                    @emergency.Status
+                                </span>
+                            </p>
                             <p><strong>Department:</strong> @emergency.Department.Name</p>
                         </div>
                         <div class="modal-footer">
@@ -61,8 +94,8 @@
             </div>
         }
     </div>
-
     @section Scripts {
         <script src="~/js/emergency.js"></script>
     }
 </div>
+

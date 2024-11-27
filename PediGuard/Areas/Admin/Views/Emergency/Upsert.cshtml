@@ -38,12 +38,19 @@
 
             <!-- Status Field -->
             <div class="form-floating py-2 col-12">
-                <select asp-for="Emergency.Status" class="form-select border-0 shadow">
-                    <option value="Pending">Pending</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Resolved">Resolved</option>
-                    <option value="Cancelled">Cancelled</option>
-                </select>
+                @if (Model.Emergency.Id == 0)
+                {
+                    <input asp-for="Emergency.Status" class="form-control border-0 shadow-sm" value="Pending" readonly />
+                }
+                else
+                {
+                    <select asp-for="Emergency.Status" class="form-select border-0 shadow">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                }
                 <label asp-for="Emergency.Status" class="ms-2"></label>
                 <span asp-validation-for="Emergency.Status" class="text-danger"></span>
             </div>

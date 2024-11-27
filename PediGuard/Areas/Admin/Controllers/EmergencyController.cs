@@ -64,6 +64,9 @@ namespace PediGuard.Areas.Admin.Controllers
                 {
                     emergencyVM.Emergency.CreatedAt = DateTime.Now;
                     emergencyVM.Emergency.UpdatedAt = DateTime.Now;
+                    emergencyVM.Emergency.Status = "Pending";
+                    emergencyVM.Emergency.CreatedAt = DateTime.Now;
+                    emergencyVM.Emergency.UpdatedAt = DateTime.Now;
                     _unitOfWork.Emergency.Add(emergencyVM.Emergency);
 
                     // Envoyer des emails à tous les assistants
