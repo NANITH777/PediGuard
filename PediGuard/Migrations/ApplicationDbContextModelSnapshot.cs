@@ -361,6 +361,60 @@ namespace PediGuard.Migrations
                         });
                 });
 
+            modelBuilder.Entity("PediGuard.Models.DepartmentP", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CurrentCapacity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfBeds")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorID");
+
+                    b.ToTable("DepartmentPs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CurrentCapacity = 25,
+                            DoctorID = 1,
+                            Name = "Cardiology",
+                            NumberOfBeds = 30
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CurrentCapacity = 15,
+                            DoctorID = 3,
+                            Name = "Neurology",
+                            NumberOfBeds = 20
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CurrentCapacity = 35,
+                            DoctorID = 3,
+                            Name = "Pediatrics",
+                            NumberOfBeds = 40
+                        });
+                });
+
             modelBuilder.Entity("PediGuard.Models.Doctor", b =>
                 {
                     b.Property<int>("Id")
@@ -474,32 +528,32 @@ namespace PediGuard.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9126),
+                            CreatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1733),
                             DepartmentId = 1,
                             Description = "Fire in the emergency room",
                             Location = "Emergency Room 1",
                             Status = "Pending",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9126)
+                            UpdatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1734)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9128),
+                            CreatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1736),
                             DepartmentId = 2,
                             Description = "Child with severe asthma attack",
                             Location = "Pediatrics Ward",
                             Status = "In Progress",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9129)
+                            UpdatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1736)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9131),
+                            CreatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1738),
                             DepartmentId = 1,
                             Description = "Power outage in the hospital",
                             Location = "Main Building",
                             Status = "Resolved",
-                            UpdatedAt = new DateTime(2024, 11, 27, 18, 14, 51, 324, DateTimeKind.Local).AddTicks(9131)
+                            UpdatedAt = new DateTime(2024, 11, 28, 13, 10, 27, 63, DateTimeKind.Local).AddTicks(1739)
                         });
                 });
 
@@ -613,6 +667,17 @@ namespace PediGuard.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PediGuard.Models.DepartmentP", b =>
+                {
+                    b.HasOne("PediGuard.Models.Doctor", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
                 });
 
             modelBuilder.Entity("PediGuard.Models.Emergency", b =>

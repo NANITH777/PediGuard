@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QNST7bEK+B6H0NqFspXb2XGZR0w6Mxf6z5ukOA9yA94=",
+  "Hash": "gHkRSDWcoQEZsFsyHv+cNJ2dkq3pt+1ujXhlNnOjWSI=",
   "Source": "PediGuard",
   "BasePath": "_content/PediGuard",
   "Mode": "Default",
@@ -1668,6 +1668,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Hospital\\image_fx_ (12).jpg"
+    },
+    {
+      "Identity": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\department.js",
+      "SourceId": "PediGuard",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\",
+      "BasePath": "_content/PediGuard",
+      "RelativePath": "js/department.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\department.js"
     },
     {
       "Identity": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\emergency.js",
