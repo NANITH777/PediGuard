@@ -6,6 +6,7 @@
         IAssistantRepository Assistant { get; }
         INobetRepository Nobet { get; }
         IEmergencyRepository Emergency { get; }
+        IDoctorRepository Doctor { get; }
         void Save();
     }
 }

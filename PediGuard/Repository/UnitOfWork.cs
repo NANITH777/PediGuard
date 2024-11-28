@@ -10,6 +10,7 @@ namespace PediGuard.Repository
         public IAssistantRepository Assistant { get; private set; }
         public INobetRepository Nobet { get; private set; }
         public IEmergencyRepository Emergency { get; private set; }
+        public IDoctorRepository Doctor { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
         {
@@ -18,6 +19,7 @@ namespace PediGuard.Repository
             Assistant = new AssistantRepository(_db);
             Nobet = new NobetRepository(_db);
             Emergency = new EmergencyRepository(_db);
+            Doctor = new DoctorRepository(_db);
         }
         public void Save()
         {
