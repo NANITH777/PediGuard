@@ -31,8 +31,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Make cookie HTTP only
     options.Cookie.IsEssential = true; // Required for session to work
 });
-builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 

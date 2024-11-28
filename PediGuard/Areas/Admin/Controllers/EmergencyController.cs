@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PediGuard.Helper;
@@ -16,12 +17,12 @@ namespace PediGuard.Areas.Admin.Controllers
     public class EmergencyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        //private readonly EmailService _emailService;
+        private readonly IEmailSender _emailSender;
 
-        public EmergencyController(IUnitOfWork unitOfWork/*, EmailService emailService*/)
+        public EmergencyController(IUnitOfWork unitOfWork, IEmailSender emailSender)
         {
             _unitOfWork = unitOfWork;
-            //_emailService = emailService;
+            _emailSender = emailSender;
         }
 
         public IActionResult Index()
@@ -56,7 +57,7 @@ namespace PediGuard.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upsert(EmergencyVM emergencyVM)
+        public async Task<IActionResult> UpsertAsync(EmergencyVM emergencyVM)
         {
             if (ModelState.IsValid)
             {
@@ -69,14 +70,31 @@ namespace PediGuard.Areas.Admin.Controllers
                     emergencyVM.Emergency.UpdatedAt = DateTime.Now;
                     _unitOfWork.Emergency.Add(emergencyVM.Emergency);
 
-                    // Envoyer des emails à tous les assistants
-                    var assistants = _unitOfWork.Assistant.GetAll().ToList();
-                    foreach (var assistant in assistants)
+                    /// Retrieve all emails of doctors and assistants
+                    var recipients = _unitOfWork.Doctor.GetAll()
+                        .Select(d => d.Email)
+                        .Union(_unitOfWork.Assistant.GetAll().Select(a => a.Email))
+                        .Distinct()
+                        .ToList();
+
+                    // Prepare the subject and body of the email
+                    var subject = $"New Emergency - {emergencyVM.Emergency.Description}";
+                    var department = _unitOfWork.Department.Get(d => d.Id == emergencyVM.Emergency.DepartmentId);
+
+                    var body = $@"
+                        <h2>New Emergency Detected</h2>
+                        <p><strong>Description:</strong> {emergencyVM.Emergency.Description}</p>
+                        <p><strong>Location:</strong> {emergencyVM.Emergency.Location}</p>
+                        <p><strong>Date:</strong> {emergencyVM.Emergency.CreatedAt}</p>
+                        <p><strong>Department:</strong> {department?.Name}</p>
+                    ";
+
+                    // Send emails
+                    foreach (var email in recipients)
                     {
-                        var subject = "Urgence: " + emergencyVM.Emergency.Description;
-                        var message = $"There is a new emergency.<br>Description: {emergencyVM.Emergency.Description}<br>Date et Heure: {emergencyVM.Emergency.CreatedAt}<br>Lieu: {emergencyVM.Emergency.Location}";
-                        //await _emailService.SendEmailAsync(assistant.Email, subject, message);
+                        await _emailSender.SendEmailAsync(email, subject, body);
                     }
+
                 }
                 else
                 {
