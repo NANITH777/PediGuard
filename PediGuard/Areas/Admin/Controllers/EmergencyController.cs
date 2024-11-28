@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 namespace PediGuard.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class EmergencyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

@@ -90,47 +90,59 @@
         function InitializeCalendar() {
             try {
                 var calendarEl = document.getElementById('calendar');
-                if (calendarEl != null) 
-                {
+                if (calendarEl != null) {
                     calendar = new FullCalendar.Calendar(calendarEl, {
-                                initialView: 'timeGridWeek',
+                        initialView: 'timeGridWeek',
                         headerToolbar: {
                             left: 'prev,next today',
                             center: 'title',
                             right: 'dayGridMonth,timeGridWeek,timeGridDay'
                         },
                         events: '@Url.Action("GetAllNobet", "Nobet")',
-                        events: '@Url.Action("GetAllNobet", "Nobet")',
                         eventClick: function (info) {
                             // Check if the current user is an admin
                             var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
+                            var isPatient = @User.IsInRole(SD.Role_Patient).ToString().ToLower();
 
                             var alertConfig = {
                                 title: 'Shift Details',
                                 html: `
-                            <div class="text-start">
-                                <p><strong>Title:</strong> ${info.event.title}</p>
-                                <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
-                                <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
-                            </div>
-                        `,
+                                            <div class="text-start">
+                                                <p><strong>Title:</strong> ${info.event.title}</p>
+                                                <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
+                                                <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
+                                            </div>
+                                        `,
                                 icon: 'info',
                                 showCancelButton: true,
                                 cancelButtonText: 'Close'
                             };
 
-                            // Conditionally add the confirm button only for admins
+                            // Conditionally add the confirm button for admins and book button for patients
                             if (isAdmin) {
                                 alertConfig.confirmButtonText = 'Edit';
+                                alertConfig.showConfirmButton = true;
+                            } else if (isPatient) {
+                                alertConfig.confirmButtonText = 'Book an Appointment';
                                 alertConfig.showConfirmButton = true;
                             } else {
                                 alertConfig.showConfirmButton = false;
                             }
 
                             Swal.fire(alertConfig).then((result) => {
-                                if (result.isConfirmed && isAdmin) {
-                                    // Shift editing logic - only accessible to admins
-                                    window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
+                                if (result.isConfirmed) {
+                                    if (isAdmin) {
+                                        // Shift editing logic - only accessible to admins
+                                        window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
+                                    } else if (isPatient) {
+                                        // Booking appointment logic - only accessible to patients
+                                        var assistantId = info.event.extendedProps.assistantId;
+                                        var departmentId = info.event.extendedProps.departmentId;
+                                        var startTime = info.event.start.toISOString();
+                                        var endTime = info.event.end.toISOString();
+                                        var url = `/patient/appointment/book?assistantId=${assistantId}&departmentId=${departmentId}&startTime=${startTime}&endTime=${endTime}`;
+                                        window.location.href = url;
+                                    }
                                 }
                             });
                         },
@@ -179,24 +191,6 @@
             catch (e) {
                 console.error("Calendar initialization error:", e);
             }
-        }
-        // Filters
-        document.getElementById('departmentFilter').addEventListener('change', function () {
-            calendar.getEvents().forEach(function (event) {
-                var departmentFilter = document.getElementById('departmentFilter').value;
-                event.remove();
-            });
-            calendar.refetchEvents();
-        });
-
-        // New Shift button
-        var addNewScheduleButton = document.getElementById('addNewSchedule');
-        if (addNewScheduleButton) {
-            addNewScheduleButton.addEventListener('click', function () {
-                window.location.href = '@Url.Action("Upsert", "Nobet")';
-            });
-        } else {
-            console.log('"New Shift" n\'is not available');
         }
 
         $(document).ready(function () {
