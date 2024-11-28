@@ -12,6 +12,7 @@ namespace PediGuard.Models
         public DbSet<Assistant> Assistants { get; set; }
         public DbSet<Nobet> Nobets { get; set; }
         public DbSet<Emergency> Emergencies { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

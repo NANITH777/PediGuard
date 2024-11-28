@@ -7,6 +7,7 @@
         INobetRepository Nobet { get; }
         IEmergencyRepository Emergency { get; }
         IDoctorRepository Doctor { get; }
+        IAppointmentRepository Appointment { get; }
         void Save();
     }
 }
