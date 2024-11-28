@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\viewmodels\\departmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\viewmodels\\departmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\models\\viewmodels\\nobetvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:models\\viewmodels\\nobetvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|d:\\web projeleri\\pediguard\\pediguard\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63199668-3FF2-4446-80FB-9C94315DB313}|PediGuard.csproj|solutionrelative:areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DepartmentVM.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\DepartmentVM.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\DepartmentVM.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\DepartmentVM.cs",
+              "RelativeToolTip": "Models\\ViewModels\\DepartmentVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T09:17:35.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NobetVM.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\NobetVM.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\NobetVM.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Models\\ViewModels\\NobetVM.cs",
+              "RelativeToolTip": "Models\\ViewModels\\NobetVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T09:17:20.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DepartmentController.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\Areas\\Admin\\Controllers\\DepartmentController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T09:12:27.884Z",
               "EditorCaption": ""
