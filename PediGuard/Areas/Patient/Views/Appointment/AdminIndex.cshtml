@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PediGuard.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Manage Appointments";
+}
+
+<h2>Manage Appointments</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Assistant</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Patient</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.Nobet.Assistant.FullName</td>
+                <td>@appointment.Nobet.Department.Name</td>
+                <td>@appointment.Nobet.Date.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@appointment.ApplicationUser.Name</td>
+                <td>@appointment.Status</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@appointment.ID" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

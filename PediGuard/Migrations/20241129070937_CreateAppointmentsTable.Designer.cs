@@ -12,8 +12,8 @@ using PediGuard.Models;
 namespace PediGuard.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241128131518_AppointmentTable")]
-    partial class AppointmentTable
+    [Migration("20241129070937_CreateAppointmentsTable")]
+    partial class CreateAppointmentsTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -239,45 +239,31 @@ namespace PediGuard.Migrations
 
             modelBuilder.Entity("PediGuard.Models.Appointment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("ApplicationUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("AssistantId")
+                    b.Property<int>("NobetID")
                         .HasColumnType("int");
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
                     b.HasIndex("ApplicationUserId");
 
-                    b.HasIndex("AssistantId");
-
-                    b.HasIndex("DepartmentId");
+                    b.HasIndex("NobetID");
 
                     b.ToTable("Appointments");
                 });
@@ -522,32 +508,32 @@ namespace PediGuard.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5579),
+                            CreatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(784),
                             DepartmentId = 1,
                             Description = "Fire in the emergency room",
                             Location = "Emergency Room 1",
                             Status = "Pending",
-                            UpdatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5579)
+                            UpdatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(785)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5582),
+                            CreatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(787),
                             DepartmentId = 2,
                             Description = "Child with severe asthma attack",
                             Location = "Pediatrics Ward",
                             Status = "In Progress",
-                            UpdatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5582)
+                            UpdatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(787)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5584),
+                            CreatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(790),
                             DepartmentId = 1,
                             Description = "Power outage in the hospital",
                             Location = "Main Building",
                             Status = "Resolved",
-                            UpdatedAt = new DateTime(2024, 11, 28, 16, 15, 14, 214, DateTimeKind.Local).AddTicks(5584)
+                            UpdatedAt = new DateTime(2024, 11, 29, 10, 9, 36, 376, DateTimeKind.Local).AddTicks(790)
                         });
                 });
 
@@ -671,23 +657,15 @@ namespace PediGuard.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PediGuard.Models.Assistant", "Assistant")
+                    b.HasOne("PediGuard.Models.Nobet", "Nobet")
                         .WithMany()
-                        .HasForeignKey("AssistantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PediGuard.Models.Department", "Department")
-                        .WithMany()
-                        .HasForeignKey("DepartmentId")
+                        .HasForeignKey("NobetID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
 
-                    b.Navigation("Assistant");
-
-                    b.Navigation("Department");
+                    b.Navigation("Nobet");
                 });
 
             modelBuilder.Entity("PediGuard.Models.Emergency", b =>

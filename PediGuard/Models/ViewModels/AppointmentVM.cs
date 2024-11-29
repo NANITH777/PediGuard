@@ -6,7 +6,6 @@ namespace PediGuard.Models.ViewModels
     {
         public Appointment Appointment { get; set; }
 
-        public IEnumerable<SelectListItem> AssistantList { get; set; }
-        public IEnumerable<SelectListItem> DepartmentList { get; set; }
+        public IEnumerable<SelectListItem> NobetList { get; set; }
     }
 }

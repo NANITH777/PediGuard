@@ -37,7 +37,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="Patient" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        @if(User.IsInRole(SD.Role_Admin))
+
+                        @if (User.IsInRole(SD.Role_Patient))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Patient" asp-controller="Appointment" asp-action="Index">
+                                    My Appointments
+                                </a>
+                            </li>
+                            @* <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Patient" asp-controller="Nobet" asp-action="Available">
+                                    Book an Appointment
+                                </a>
+                            </li> *@
+                        }
+
+                        @if (User.IsInRole(SD.Role_Admin))
                         {
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,22 +71,37 @@
                                     <li class="nav-item">
                                         <a class="dropdown-item" asp-area="Admin" asp-controller="Nobet" asp-action="Index">Nobet</a>
                                     </li>
-                                    
-
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Appointments
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Patient" asp-controller="Appointment" asp-action="AdminIndex">
+                                            All Appointments
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Patient" asp-controller="Appointment" asp-action="PendingAppointments">
+                                            Pending Appointments
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="Admin" asp-controller="Emergency" asp-action="Index">Emergency</a>
                             </li>
                         }
+
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="Admin" asp-controller="Nobet" asp-action="Calendar">Nobet Scheduler</a>
                         </li>
-                        
-                     
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
+
             </div>
         </nav>
     </header>

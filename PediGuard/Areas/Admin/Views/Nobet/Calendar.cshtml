@@ -107,13 +107,15 @@
                             var alertConfig = {
                                 title: 'Shift Details',
                                 html: `
-                                            <div class="text-start">
-                                                <p><strong>Title:</strong> ${info.event.title}</p>
-                                                <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
-                                                <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
-                                            </div>
-                                        `,
-                                icon: 'info',
+                                    <div class="text-start">
+                                        <p><strong>Title:</strong> ${info.event.title}</p>
+                                        <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
+                                        <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
+                                        <p><strong>Assistant:</strong> ${info.event.extendedProps.assistantName}</p>
+                                        <p><strong>Department:</strong> ${info.event.extendedProps.departmentName}</p>
+                                    </div>
+                                `,
+                            icon: 'info',
                                 showCancelButton: true,
                                 cancelButtonText: 'Close'
                             };
@@ -123,7 +125,7 @@
                                 alertConfig.confirmButtonText = 'Edit';
                                 alertConfig.showConfirmButton = true;
                             } else if (isPatient) {
-                                alertConfig.confirmButtonText = 'Book an Appointment';
+                                alertConfig.confirmButtonText = 'Book Appointment';
                                 alertConfig.showConfirmButton = true;
                             } else {
                                 alertConfig.showConfirmButton = false;
@@ -136,15 +138,12 @@
                                         window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
                                     } else if (isPatient) {
                                         // Booking appointment logic - only accessible to patients
-                                        var assistantId = info.event.extendedProps.assistantId;
-                                        var departmentId = info.event.extendedProps.departmentId;
-                                        var startTime = info.event.start.toISOString();
-                                        var endTime = info.event.end.toISOString();
-                                        var url = `/patient/appointment/book?assistantId=${assistantId}&departmentId=${departmentId}&startTime=${startTime}&endTime=${endTime}`;
+                                        // Simplified to just pass the Nobet ID
+                                        var url = `/patient/appointment/book?nobetId=${info.event.id}`;
                                         window.location.href = url;
                                     }
                                 }
-                            });
+                            }); 
                         },
                         dateClick: function (info) {
                             var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
