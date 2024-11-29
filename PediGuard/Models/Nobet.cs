@@ -36,6 +36,7 @@ namespace PediGuard.Models
         [Required]
         [DataType(DataType.Time)]
         [Display(Name = "End Time")]
-        public DateTime EndTime { get; set; } 
+        public DateTime EndTime { get; set; }
+        public ICollection<Appointment> Appointments { get; set; }
     }
 }

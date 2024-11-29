@@ -35,5 +35,15 @@ namespace PediGuard.Repository
             }
         }
 
+        public IEnumerable<Nobet> GetAllAvailableNobets()
+        {
+            return _db.Nobets
+                .Include(n => n.Assistant)
+                .Include(n => n.Department)
+                .Where(n => !n.Appointments.Any())
+                .OrderBy(n => n.Date)
+                .ToList();
+        }
+
     }
 }

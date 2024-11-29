@@ -115,7 +115,7 @@
                                         <p><strong>Department:</strong> ${info.event.extendedProps.departmentName}</p>
                                     </div>
                                 `,
-                            icon: 'info',
+                                icon: 'info',
                                 showCancelButton: true,
                                 cancelButtonText: 'Close'
                             };
@@ -124,10 +124,12 @@
                             if (isAdmin) {
                                 alertConfig.confirmButtonText = 'Edit';
                                 alertConfig.showConfirmButton = true;
-                            } else if (isPatient) {
+                            } 
+                            else if (isPatient) {
                                 alertConfig.confirmButtonText = 'Book Appointment';
                                 alertConfig.showConfirmButton = true;
-                            } else {
+                            } 
+                            else {
                                 alertConfig.showConfirmButton = false;
                             }
 
