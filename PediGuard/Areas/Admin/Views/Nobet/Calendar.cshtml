@@ -15,9 +15,11 @@
                 </h2>
                 @if (User.IsInRole(SD.Role_Admin))
                 {
-                    <button id="addNewSchedule" class="btn btn-outline-light">
-                        <i class="bi bi-plus-circle me-2"></i>New Shift
-                    </button>
+                    <a asp-controller="Nobet" asp-action="Upsert" class="text-decoration-none">
+                        <button id="addNewSchedule" class="btn btn-outline-light">
+                            <i class="bi bi-plus-circle me-2"></i>New Shift
+                        </button>
+                    </a>
                 }
             </div>
         </div>

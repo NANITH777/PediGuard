@@ -20,6 +20,12 @@
                         </div>
 
                         <div class="mb-3">
+                            <label asp-for="Appointment.Time" class="form-label">Appointment Time</label>
+                            <input asp-for="Appointment.Time" class="form-control" type="time" />
+                            <span asp-validation-for="Appointment.Time" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
                             <label asp-for="Appointment.Notes" class="form-label">Additional Notes</label>
                             <textarea asp-for="Appointment.Notes" class="form-control" rows="3"
                                       placeholder="Additional information..."></textarea>

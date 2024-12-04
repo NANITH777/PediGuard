@@ -12,21 +12,25 @@
             <th>Assistant</th>
             <th>Department</th>
             <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var nobet in Model)
         {
-            <tr>
-                <td>@nobet.Assistant.FullName</td>
-                <td>@nobet.Department.Name</td>
-                <td>@nobet.Date.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>
-                    <a asp-area="Patient" asp-action="Book" asp-controller="Appointment" 
-                    asp-route-nobetId="@nobet.ID" class="btn btn-primary">Book</a>
-                </td>
-            </tr>
+                <tr>
+                    <td>@nobet.Assistant.FullName</td>
+                    <td>@nobet.Department.Name</td>
+                    <td>@nobet.Date.ToString("dd/MM/yyyy")</td>
+                    <td>@nobet.StartTime.ToString("HH:mm")</td>
+                    <td>@nobet.EndTime.ToString("HH:mm")</td>
+                    <td>
+                        <a asp-area="Patient" asp-action="Book" asp-controller="Appointment" 
+                           asp-route-nobetId="@nobet.ID" class="btn btn-primary">Book</a>
+                    </td>
+                </tr>
         }
     </tbody>
 </table>

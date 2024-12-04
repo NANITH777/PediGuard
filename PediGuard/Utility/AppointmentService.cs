@@ -59,15 +59,12 @@ namespace PediGuard.Utility
 
         public async Task<List<Nobet>> GetAvailableNobetShifts(DateTime? specificDate = null)
         {
-            // Query for Nobet shifts that are not yet booked
             var query = _context.Nobets
                 .Include(n => n.Assistant)
                 .Include(n => n.Department)
                 .Where(n => !_context.Appointments
-                    .Any(a => a.NobetID == n.ID &&
-                              a.Status != AppointmentStatus.Cancelled));
+                    .Any(a => a.NobetID == n.ID && a.Status != AppointmentStatus.Cancelled));
 
-            // Optional: Filter by specific date
             if (specificDate.HasValue)
             {
                 query = query.Where(n => n.Date.Date == specificDate.Value.Date);

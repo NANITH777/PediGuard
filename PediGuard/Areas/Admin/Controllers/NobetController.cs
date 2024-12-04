@@ -32,9 +32,9 @@ namespace PediGuard.Areas.Admin.Controllers
         public IActionResult Available()
         {
             var availableNobets = _unitOfWork.Nobet
-                .GetAll(n => !n.Appointments.Any(), includeProperties: "Assistant,Department")
-                .OrderBy(n => n.Date)
-                .ToList();
+            .GetAll(n => !n.Appointments.Any(a => a.Status != AppointmentStatus.Cancelled), includeProperties: "Assistant,Department")
+            .OrderBy(n => n.Date)
+            .ToList();
 
             return View(availableNobets);
         }
@@ -154,30 +154,6 @@ namespace PediGuard.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        //public IActionResult GetAllNobet()
-        //{
-        //    try
-        //    {
-        //        var nobetList = _unitOfWork.Nobet.GetAll(includeProperties: "Assistant,Department")
-        //            .Select(n => new
-        //            {
-        //                id = n.ID,
-        //                title = $"{n.Assistant?.FullName ?? "Unknown"} - {n.Department?.Name ?? "Unknown"}",
-        //                start = n.Date.Add(n.StartTime.TimeOfDay).ToString("yyyy-MM-dd'T'HH:mm:ss"),
-        //                end = n.Date.Add(n.EndTime.TimeOfDay).ToString("yyyy-MM-dd'T'HH:mm:ss"),
-        //                color = GetColorForDepartment(n.Department?.Name)
-        //            })
-        //            .ToList();
-
-        //        return Json(nobetList);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Log the exception
-        //        return StatusCode(500, new { message = "Error retrieving Nobet data", details = ex.Message });
-        //    }
-        //}
-
         public IActionResult GetAllNobet()
         {
             try
@@ -203,6 +179,7 @@ namespace PediGuard.Areas.Admin.Controllers
                 return StatusCode(500, new { message = "Error retrieving Nobet data", details = ex.Message });
             }
         }
+
         private string GetColorForDepartment(string departmentName)
         {
             return departmentName switch

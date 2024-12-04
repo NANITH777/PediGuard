@@ -72,7 +72,7 @@ namespace PediGuard.Areas.Patient.Controllers
                     new SelectListItem
                     {
                         Value = nobet.ID.ToString(),
-                        Text = $"{nobet.Assistant.FullName} - {nobet.Department.Name} - {nobet.Date:dd/MM/yyyy HH:mm}"
+                        Text = $"{nobet.Assistant.FullName} - {nobet.Department.Name} - {nobet.Date:dd/MM/yyyy}"
                     }
                 }
             };
@@ -86,13 +86,14 @@ namespace PediGuard.Areas.Patient.Controllers
         public async Task<IActionResult> Book(AppointmentVM appointmentVM)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
+            System.Diagnostics.Debug.WriteLine($"Received Time: {appointmentVM.Appointment.Time}");
             var appointment = new Appointment
             {
                 NobetID = appointmentVM.Appointment.NobetID,
                 ApplicationUserId = userId,
                 Status = AppointmentStatus.Pending,
-                Notes = appointmentVM.Appointment.Notes
+                Notes = appointmentVM.Appointment.Notes,
+                Time = appointmentVM.Appointment.Time
             };
 
             try
@@ -171,6 +172,20 @@ namespace PediGuard.Areas.Patient.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult DeleteAppointment(int id)
+        {
+            var appointment = _unitOfWork.Appointment.GetAll().FirstOrDefault(a => a.ID == id);
+            if (appointment == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+
+            _unitOfWork.Appointment.Remove(appointment);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete successful" });
+        }
+
         // Admin Section - Manage appointments
         [Authorize(Roles = SD.Role_Admin)]
         public IActionResult AdminIndex()
@@ -182,6 +197,21 @@ namespace PediGuard.Areas.Patient.Controllers
 
             return View(appointments);
         }
+
+        //[Authorize(Roles = SD.Role_Admin)]
+        //[HttpPost]
+        //public IActionResult DeleteAppointment(int id)
+        //{
+        //    var appointment = _unitOfWork.Appointment.GetAll().FirstOrDefault(a => a.ID == id);
+        //    if (appointment == null)
+        //    {
+        //        return Json(new { success = false, message = "Error while deleting" });
+        //    }
+
+        //    _unitOfWork.Appointment.Remove(appointment);
+        //    _unitOfWork.Save();
+        //    return Json(new { success = true, message = "Delete successful" });
+        //}
 
         [Authorize(Roles = SD.Role_Admin)]
         public IActionResult PendingAppointments()

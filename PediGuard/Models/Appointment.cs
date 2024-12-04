@@ -64,6 +64,9 @@ namespace PediGuard.Models
         // Optional: Additional notes or description
         [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
+
+        [DataType(DataType.Time)]
+        public TimeSpan Time { get; set; }
     }
 
     public enum AppointmentStatus

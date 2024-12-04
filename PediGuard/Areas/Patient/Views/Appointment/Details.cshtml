@@ -19,7 +19,10 @@
                     <hr />
                     <dl class="row">
                         <dt class="col-6">Date</dt>
-                        <dd class="col-6">@Model.Nobet.Date.ToString("MM/dd/yyyy HH:mm")</dd>
+                        <dd class="col-6">@Model.Nobet.Date.ToString("MM/dd/yyyy")</dd>
+
+                        <dt class="col-6">Time</dt>
+                        <dd class="col-6">@Model.Time.ToString(@"hh\:mm")</dd>
 
                         <dt class="col-6">Service</dt>
                         <dd class="col-6">@Model.Nobet.Department.Name</dd>
