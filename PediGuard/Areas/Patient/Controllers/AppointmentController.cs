@@ -198,21 +198,6 @@ namespace PediGuard.Areas.Patient.Controllers
             return View(appointments);
         }
 
-        //[Authorize(Roles = SD.Role_Admin)]
-        //[HttpPost]
-        //public IActionResult DeleteAppointment(int id)
-        //{
-        //    var appointment = _unitOfWork.Appointment.GetAll().FirstOrDefault(a => a.ID == id);
-        //    if (appointment == null)
-        //    {
-        //        return Json(new { success = false, message = "Error while deleting" });
-        //    }
-
-        //    _unitOfWork.Appointment.Remove(appointment);
-        //    _unitOfWork.Save();
-        //    return Json(new { success = true, message = "Delete successful" });
-        //}
-
         [Authorize(Roles = SD.Role_Admin)]
         public IActionResult PendingAppointments()
         {
@@ -230,22 +215,7 @@ namespace PediGuard.Areas.Patient.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdateStatus(int id, AppointmentStatus status)
         {
-            //var appointment = _unitOfWork.Appointment.Get(a => a.ID == id);
-
-            //if (appointment == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //appointment.Status = status;
-            //_unitOfWork.Appointment.Update(appointment);
-            //_unitOfWork.Save();
-
-            //TempData["success"] = $"Appointment {status.ToString().ToLower()} successfully.";
-            //return RedirectToAction(nameof(PendingAppointments));
-
-
-            // Point de débogage
+            
             System.Diagnostics.Debug.WriteLine($"UpdateStatus called with id={id} and status={status}");
 
             var appointment = _unitOfWork.Appointment.Get(a => a.ID == id);
