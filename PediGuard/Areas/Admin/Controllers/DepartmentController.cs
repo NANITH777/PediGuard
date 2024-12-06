@@ -36,17 +36,6 @@ namespace PediGuard.Areas.Admin.Controllers
                 TempData["success"] = "Department created successfully";
             }
 
-            //if (obj.Name == obj.DisplayOrder.ToString())
-            //{
-            //    ModelState.AddModelError("name", "The Display order can not exactly match with the Name");
-            //}
-            //if (ModelState.IsValid)
-            //{
-            //    _unitOfWork.Department.Add(obj);
-            //    _unitOfWork.Save();
-            //    TempData["success"] = "Department created successfully";
-            //    return RedirectToAction("Index");
-            //}
             return RedirectToAction("Index");
         }
 
