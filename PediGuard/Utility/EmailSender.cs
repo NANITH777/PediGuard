@@ -18,17 +18,6 @@ namespace PediGuard.Utility
         {
             SendGridSecret = _config.GetValue<string>("SendGrid:SecretKey");
         }
-        //public Task SendEmailAsync(string email, string subject, string htmlMessage)
-        //{
-        //    // Logic to send emails
-
-        //    var client = new SendGridClient(SendGridSecret);
-        //    var from = new EmailAddress("nanifulchany@gmail.com", "PediGuard");
-        //    var to = new EmailAddress(email);
-        //    var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
-
-        //    return client.SendEmailAsync(message);
-        //}
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             try
