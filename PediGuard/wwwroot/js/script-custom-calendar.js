@@ -40,6 +40,5 @@
 //        }
 //    }
 //    catch (e) {
-//        console.error("Calendar initialization error:", e);
 //    }
 //}

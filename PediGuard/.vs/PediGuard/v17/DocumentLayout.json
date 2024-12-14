@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "wwwroot\\js\\script-custom-calendar.js",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\PediGuard\\wwwroot\\js\\script-custom-calendar.js",
               "RelativeToolTip": "wwwroot\\js\\script-custom-calendar.js",
-              "ViewState": "AgIAABQAAAAAAAAAAAAUwBcAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-12-12T18:37:23.489Z",
               "EditorCaption": ""
@@ -99,8 +99,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-08T19:23:53.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T19:23:53.562Z"
             },
             {
               "$type": "Document",
@@ -232,8 +231,7 @@
               "RelativeToolTip": "Areas\\Patient\\Views\\Appointment\\PendingAppointments.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T20:27:52.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T20:27:52.81Z"
             },
             {
               "$type": "Document",
@@ -245,8 +243,7 @@
               "RelativeToolTip": "Areas\\Patient\\Views\\Appointment\\UpdateStatus.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T20:27:50.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T20:27:50.675Z"
             },
             {
               "$type": "Document",
@@ -258,8 +255,7 @@
               "RelativeToolTip": "Helper\\Helper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T20:27:11.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T20:27:11.712Z"
             }
           ]
         }
