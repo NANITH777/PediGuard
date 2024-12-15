@@ -23,7 +23,6 @@ namespace Pediatric_Service.DBInitializer
 
         public void Initialize()
         {
-            // Migrations if they are not applied
             try
             {
                 if (_db.Database.GetPendingMigrations().Count() > 0)
@@ -41,7 +40,6 @@ namespace Pediatric_Service.DBInitializer
             }
 
 
-            // Create roles if they are not applied
             if (!_roleManager.RoleExistsAsync(SD.Role_Assistant).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Assistant)).GetAwaiter().GetResult();
@@ -49,7 +47,6 @@ namespace Pediatric_Service.DBInitializer
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
 
 
-                // if roles are not created, then we will create Admin user as well
                 _userManager.CreateAsync(new ApplicationUser
                 {
                     UserName = "nanith@sakarya.edu.tr",
