@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\dbinitializer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:dbinitializer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{244918CA-89D5-4C6D-891A-226FB10DB9E0}|Pediatric_Service.csproj|d:\\web projeleri\\pediguard\\pediatric_service\\models\\assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +90,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T12:38:01.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T12:15:52.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "PendingAppointments.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Views\\Appointment\\PendingAppointments.cshtml",
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Appointment\\PendingAppointments.cshtml",
@@ -94,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Appointment.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -106,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Views\\Appointment\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Appointment\\Details.cshtml",
@@ -118,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AdminIndex.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Views\\Appointment\\AdminIndex.cshtml",
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Appointment\\AdminIndex.cshtml",
@@ -130,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Doctor.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\Doctor.cs",
               "RelativeDocumentMoniker": "Models\\Doctor.cs",
@@ -142,19 +176,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
               "ToolTip": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\ApplicationUser.cs",
               "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:55:55.165Z"
+              "WhenOpened": "2024-12-14T15:55:55.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Nobet.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\Nobet.cs",
               "RelativeDocumentMoniker": "Models\\Nobet.cs",
@@ -166,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Assistant.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Models\\Assistant.cs",
               "RelativeDocumentMoniker": "Models\\Assistant.cs",
@@ -178,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "DoctorAppointments.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Views\\Appointment\\DoctorAppointments.cshtml",
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Appointment\\DoctorAppointments.cshtml",
@@ -190,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "Areas\\User\\Controllers\\AppointmentController.cs",
@@ -202,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AssistantController.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\Admin\\Controllers\\AssistantController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AssistantController.cs",
@@ -214,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -226,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Areas\\User\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Home\\Index.cshtml",
@@ -238,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -246,12 +281,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAIkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-13T17:05:40.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T17:05:40.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "user.js",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\wwwroot\\js\\user.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\user.js",
@@ -263,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "DBInitializer.cs",
               "DocumentMoniker": "D:\\WEb Projeleri\\PediGuard\\Pediatric_Service\\DBInitializer\\DBInitializer.cs",
               "RelativeDocumentMoniker": "DBInitializer\\DBInitializer.cs",
