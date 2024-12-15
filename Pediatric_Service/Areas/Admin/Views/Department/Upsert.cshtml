@@ -1,0 +1,78 @@
+﻿@model DepartmentVM
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2 ">@(Model.Department.Id != 0 ? "Update" : "Create") Department</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body p-4">
+    <form method="post" class="row" enctype="multipart/form-data">
+        <input asp-for="Department.Id" type="hidden" />
+        <div class="border p-3">
+            <!-- Department Name Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Department.Name" class="form-control border-0 shadow" />
+                <label asp-for="Department.Name" class="ms-2"></label>
+                <span asp-validation-for="Department.Name" class="text-danger"></span>
+            </div>
+
+            <!-- Number of Beds Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Department.NumberOfBeds" class="form-control border-0 shadow" />
+                <label asp-for="Department.NumberOfBeds" class="ms-2"></label>
+                <span asp-validation-for="Department.NumberOfBeds" class="text-danger"></span>
+            </div>
+
+            <!-- Current Capacity Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Department.CurrentCapacity" class="form-control border-0 shadow" />
+                <label asp-for="Department.CurrentCapacity" class="ms-2"></label>
+                <span asp-validation-for="Department.CurrentCapacity" class="text-danger"></span>
+            </div>
+            <!-- Doctor Field (Dropdown) -->
+            <div class="form-floating py-2 col-12">
+                <select asp-for="Department.DoctorId" asp-items="Model.DoctorList" class="form-select border-0 shadow">
+                    <option value="" disabled selected>-- Select Doctor --</option>
+                </select>
+                <label asp-for="Department.DoctorId" class="ms-2"></label>
+                <span asp-validation-for="Department.DoctorId" class="text-danger"></span>
+            </div>
+
+            <!-- Submit and Back Buttons -->
+            <div class="row mt-3">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">
+                        @(Model.Department.Id != 0 ? "Update" : "Create")
+                    </button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Department" asp-action="Index" class="btn btn-secondary border form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

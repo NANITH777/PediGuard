@@ -1,0 +1,95 @@
+﻿@model NobetVM
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2 ">@(Model.Nobet.ID != 0 ? "Update" : "Create") Disponibility Slot</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body p-4">
+    <form method="post" class="row" enctype="multipart/form-data">
+        <input asp-for="Nobet.ID" hidden />
+        <div class="border p-3">
+
+            <!-- Doctor Field (Dropdown) -->
+            <div class="form-floating py-2 col-12">
+                <select asp-for="@Model.Nobet.DoctorID" asp-items="@Model.DoctorList" class="form-select border-0 shadow">
+                    <option disabled selected>-- Select Doctor -- </option>
+                </select>  @* Tag helper asp-for*@
+                <label asp-for="Nobet.DoctorID" class="ms-2"></label>
+                <span asp-validation-for="Nobet.DoctorID" class="text-danger"></span>
+            </div>
+
+            <!-- Department Field (Dropdown) -->
+            <div class="form-floating py-2 col-12">
+                <select asp-for="@Model.Nobet.DepartmentID" asp-items="@Model.DepartmentList" class="form-select border-0 shadow">
+                    <option disabled selected>-- Select Department -- </option>
+                </select>  @* Tag helper asp-for*@
+                <label asp-for="Nobet.DepartmentID" class="ms-2"></label>
+                <span asp-validation-for="Nobet.DepartmentID" class="text-danger"></span>
+            </div>
+
+            <!-- Date Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Nobet.Date" type="date" class="form-control border-0 shadow" />
+                <label asp-for="Nobet.Date" class="ms-2"></label>
+                <span asp-validation-for="Nobet.Date" class="text-danger"></span>
+            </div>
+
+            <!-- Start Time Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Nobet.StartTime" type="time" class="form-control border-0 shadow"
+                       value="@Model.Nobet.StartTime.ToString(@"hh\:mm")" />
+                <label asp-for="Nobet.StartTime" class="ms-2"></label>
+                <span asp-validation-for="Nobet.StartTime" class="text-danger"></span>
+            </div>
+
+            <!-- End Time Field -->
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Nobet.EndTime" type="time" class="form-control border-0 shadow"
+                       value="@Model.Nobet.EndTime.ToString(@"hh\:mm")" />
+                <label asp-for="Nobet.EndTime" class="ms-2"></label>
+                <span asp-validation-for="Nobet.EndTime" class="text-danger"></span>
+            </div>
+
+
+            <!-- Submit and Back Buttons -->
+            <div class="row mt-3">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">
+                        @(Model.Nobet.ID != 0 ? "Update" : "Create")
+                    </button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Nobet" asp-action="Index" class="btn btn-secondary border form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+
+
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

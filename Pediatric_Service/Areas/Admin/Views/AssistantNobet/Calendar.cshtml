@@ -1,0 +1,197 @@
+﻿@using Pediatric_Service.Helper
+@model List<AssistantNobet>
+<div class="container-fluid">
+
+    <div class="card shadow-lg border-0 mt-4">
+        <div class="card-header bg-primary bg-gradient text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <a asp-controller="Nobet" asp-action="Index" class="btn btn-outline-light">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                }
+                <h2 class="text-center flex-grow-1 mb-0">
+                    <i class="bi bi-calendar-check me-2"></i> Assistant Shift Scheduling
+                </h2>
+
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <a asp-controller="AssistantNobet" asp-action="Upsert" class="text-decoration-none">
+                        <button id="addNewSchedule" class="btn btn-outline-light">
+                            <i class="bi bi-plus-circle me-2"></i>New Shift
+                        </button>
+                    </a>
+                }
+
+            </div>
+        </div>
+
+        <div class="card-body p-4">
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <select id="departmentFilter" class="form-select">
+                        <option value="">All Departments</option>
+                        <!-- Populate dynamically from your departments -->
+                        <option value="Emergency">Emergency</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select id="assistantFilter" class="form-select">
+                        <option value="">All Assistants</option>
+                        <!-- Populate dynamically from your assistants -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" id="searchSchedule" class="form-control" placeholder="Search a shift">
+                    </div>
+                </div>
+            </div>
+
+            <div id="calendar" class="calendar-container"></div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+    <style>
+        .calendar-container {
+            min-height: 650px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .fc-event {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px !important;
+        }
+
+            .fc-event:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+        .fc-day-today {
+            background-color: #e9ecef !important;
+        }
+
+        .fc-highlight {
+            background-color: rgba(0,123,255,0.2) !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function InitializeCalendar() {
+            try {
+                var calendarEl = document.getElementById('calendar');
+                if (calendarEl != null) {
+                    calendar = new FullCalendar.Calendar(calendarEl, {
+                        initialView: 'timeGridWeek',
+                        headerToolbar: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        },
+                        events: '@Url.Action("GetAllAssistantNobet", "AssistantNobet")',
+                        eventClick: function (info) {
+                            // Check if the current user is an admin
+                            var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
+                            var isAssistant = @User.IsInRole(SD.Role_Assistant).ToString().ToLower();
+
+                            var alertConfig = {
+                                title: 'Shift Details',
+                                html: `
+                                    <div class="text-start">
+                                        <p><strong>Title:</strong> ${info.event.title}</p>
+                                        <p><strong>Start:</strong> ${info.event.start ? info.event.start.toLocaleString() : 'N/A'}</p>
+                                        <p><strong>End:</strong> ${info.event.end ? info.event.end.toLocaleString() : 'N/A'}</p>
+                                        <p><strong>Assistant:</strong> ${info.event.extendedProps.assistantName}</p>
+                                        <p><strong>Department:</strong> ${info.event.extendedProps.departmentName}</p>
+                                    </div>
+                                `,
+                                icon: 'info',
+                                showCancelButton: true,
+                                cancelButtonText: 'Close'
+                            };
+
+                            if (isAdmin) {
+                                alertConfig.confirmButtonText = 'Edit';
+                                alertConfig.showConfirmButton = true;
+                            }
+                            else {
+                                alertConfig.showConfirmButton = false;
+                            }
+
+                            Swal.fire(alertConfig).then((result) => {
+                                if (result.isConfirmed) {
+                                    if (isAdmin) {
+                                        // Shift editing logic - only accessible to admins
+                                        window.location.href = `/admin/assistantnobet/upsert?id=${info.event.id}`;
+                                    } 
+                                }
+                            });
+                        },
+                        dateClick: function (info) {
+                                var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
+                            var alertConfig = {
+                                title: 'New Shift',
+                                text: `Do you want to create a new shift for ${info.dateStr}?`,
+                                icon: 'question',
+                                showCancelButton: true,
+                                cancelButtonText: 'Cancel'
+                            };
+
+                            if (isAdmin) {
+                                alertConfig.confirmButtonText = 'Create';
+                                alertConfig.showConfirmButton = true;
+                            } else {
+                                alertConfig.showConfirmButton = false;
+                                alertConfig.text = `Shift creation is restricted to administrators for ${info.dateStr}`;
+                            }
+
+                            Swal.fire(alertConfig).then((result) => {
+                                if (result.isConfirmed && isAdmin) {
+                                    var formattedDate = new Date(info.dateStr).toISOString();
+                                    var url = '@Url.Action("Upsert", "AssistantNobet")?date=' + formattedDate;
+                                    console.log(url);
+                                    window.location.href = url;
+                                }
+                            });
+                        },
+                        height: 'auto',
+                        expandRows: true,
+                        slotMinTime: '06:00:00',
+                        slotMaxTime: '22:00:00',
+                        eventColor: '#007bff',
+                        eventTextColor: 'white',
+                        businessHours: {
+                            daysOfWeek: [1, 2, 3, 4, 5],
+                            startTime: '09:00',
+                            endTime: '17:00'
+                        }
+                    });
+                    calendar.render();
+                }
+            }
+            catch (e) {
+                console.error("Calendar initialization error:", e);
+            }
+        }
+
+        $(document).ready(function () {
+            InitializeCalendar();
+        });
+    </script>
+}

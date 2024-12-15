@@ -1,0 +1,65 @@
+﻿@model Assistant
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Edit Assistant</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body p-4">
+    <form method="post" asp-controller="Assistant" asp-action="Edit">
+        <div class="border p-3 mt-4">
+            <div class="form-floating py-2 col-12">
+                <input asp-for="FullName" class="form-control border-0 shadow" />
+                <label asp-for="FullName" class="ms-2"></label>
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="PhoneNumber" class="form-control border-0 shadow" />
+                <label asp-for="PhoneNumber" class="ms-2"></label>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Email" class="form-control border-0 shadow" />
+                <label asp-for="Email" class="ms-2"></label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Password" class="form-control border-0 shadow" />
+                <label asp-for="Password" class="ms-2"></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Address" class="form-control border-0 shadow" />
+                <label asp-for="Address" class="ms-2"></label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <select asp-for="Gender" class="form-select border-0 shadow">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label asp-for="Gender" class="ms-2"></label>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">Edit</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Assistant" asp-action="Index" class="btn btn-secondary border form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

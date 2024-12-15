@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Appointment>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>My Appointments</h2>
+        </div>
+        <div class="card-body">
+            @if (Model.Any())
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Department</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var appointment in Model)
+                        {
+                            <tr>
+                                <td>@appointment.ApplicationUser.FullName</td>
+                                <td>@appointment.Nobet.Department.Name</td>
+                                <td>@appointment.Nobet.Date.ToString("dd/MM/yyyy")</td>
+                                <td>@appointment.Nobet.StartTime.ToString("HH:mm")</td>
+                                <td>@appointment.Nobet.EndTime.ToString("HH:mm")</td>
+                                <td>
+                                    <span class="badge @GetStatusClass(appointment.Status)">
+                                        @appointment.Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@appointment.ID" class="btn btn-info btn-sm">
+                                        Details
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="alert alert-info">No appointments scheduled.</p>
+            }
+        </div>
+    </div>
+</div>
+
+@functions {
+    private string GetStatusClass(AppointmentStatus status)
+    {
+        return status switch
+        {
+            AppointmentStatus.Pending => "bg-warning",
+            AppointmentStatus.Confirmed => "bg-success",
+            AppointmentStatus.Cancelled => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}

@@ -1,0 +1,59 @@
+﻿@using Pediatric_Service.Helper
+@model IEnumerable<Pediatric_Service.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Pending Appointments";
+    var isAdmin = User.IsInRole(SD.Role_Admin);
+}
+
+<h2>Pending Appointments</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Doctor</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Patient</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.Nobet.Doctor.FullName</td>
+                <td>@appointment.Nobet.Department.Name</td>
+                <td>@appointment.Nobet.Date.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@appointment.ApplicationUser.FullName</td>
+                <td>
+                    <form asp-action="UpdateStatus" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@appointment.ID" />
+                        <input type="hidden" name="status" value="Confirmed" />
+                        <button type="submit" class="btn btn-success">Confirm</button>
+                    </form>
+                    <form asp-action="UpdateStatus" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@appointment.ID" />
+                        <input type="hidden" name="status" value="Cancelled" />
+                        <button type="submit" class="btn btn-danger">Cancel</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="card-footer text-center">
+    @if(isAdmin)
+    {
+        <a asp-action="AdminIndex" class="btn btn-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Back to List
+        </a>
+    }
+    else
+    {
+        <a asp-action="DoctorAppointments" class="btn btn-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Back to List
+        </a>
+    }
+
+</div>
