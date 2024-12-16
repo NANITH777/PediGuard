@@ -106,7 +106,6 @@
                         },
                         events: '@Url.Action("GetAllAssistantNobet", "AssistantNobet")',
                         eventClick: function (info) {
-                            // Check if the current user is an admin
                             var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
                             var isAssistant = @User.IsInRole(SD.Role_Assistant).ToString().ToLower();
 
@@ -137,7 +136,6 @@
                             Swal.fire(alertConfig).then((result) => {
                                 if (result.isConfirmed) {
                                     if (isAdmin) {
-                                        // Shift editing logic - only accessible to admins
                                         window.location.href = `/admin/assistantnobet/upsert?id=${info.event.id}`;
                                     } 
                                 }

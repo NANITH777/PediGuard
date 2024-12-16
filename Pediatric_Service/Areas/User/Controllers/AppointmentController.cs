@@ -273,7 +273,6 @@ namespace Pediatric_Service.Areas.User.Controllers
             //return RedirectToAction(nameof(PendingAppointments));
 
 
-            // Point de débogage
             System.Diagnostics.Debug.WriteLine($"UpdateStatus called with id={id} and status={status}");
 
             var appointment = _unitOfWork.Appointment.Get(a => a.ID == id);

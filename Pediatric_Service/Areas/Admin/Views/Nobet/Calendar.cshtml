@@ -114,7 +114,6 @@
                         },
                         events: '@Url.Action("GetAllNobet", "Nobet")',
                         eventClick: function (info) {
-                            // Check if the current user is an admin
                             var isAdmin = @User.IsInRole(SD.Role_Admin).ToString().ToLower();
                             var isAssistant = @User.IsInRole(SD.Role_Assistant).ToString().ToLower();
 
@@ -134,7 +133,6 @@
                                 cancelButtonText: 'Close'
                             };
 
-                            // Conditionally add the confirm button for admins and book button for patients
                             if (isAdmin) {
                                 alertConfig.confirmButtonText = 'Edit';
                                 alertConfig.showConfirmButton = true;
@@ -150,11 +148,9 @@
                             Swal.fire(alertConfig).then((result) => {
                                 if (result.isConfirmed) {
                                     if (isAdmin) {
-                                        // Shift editing logic - only accessible to admins
                                         window.location.href = `/admin/nobet/upsert?id=${info.event.id}`;
                                         } else if (isAssistant) {
-                                        // Booking appointment logic - only accessible to assistants
-                                        // Simplified to just pass the Nobet ID
+                                        
                                         var url = `/user/appointment/book?nobetId=${info.event.id}`;
                                         window.location.href = url;
                                     }

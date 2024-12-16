@@ -39,7 +39,7 @@ function loadDataTable() {
                             `
                     }
                 },
-                "width": "25%"
+                "width": "15%"
             },
         ]
     });
