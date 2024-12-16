@@ -84,35 +84,6 @@ namespace Pediatric_Service.Areas.Admin.Controllers
 
         }
 
-        //public IActionResult Delete(int? id)
-        //{
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    Department? departmentFromDb = _unitOfWork.Department.Get(u => u.Id == id);
-
-        //    if (departmentFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(departmentFromDb);
-        //}
-
-        //[HttpPost, ActionName("Delete")]
-        //public IActionResult DeletePost(int? id)
-        //{
-        //    Department? obj = _unitOfWork.Department.Get(u => u.Id == id);
-        //    if (obj == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    _unitOfWork.Department.Remove(obj);
-        //    _unitOfWork.Save();
-        //    TempData["success"] = "Department deleted successfully";
-        //    return RedirectToAction("Index");
-        //}
 
         #region API CALLS
         [HttpGet]

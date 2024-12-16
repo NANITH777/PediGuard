@@ -46,10 +46,10 @@
         }
     };
 
-    // Rendre la fonction dynamique
     document.getElementById('searchInput').addEventListener('input', filterEmergencies);
     document.getElementById('statusFilter').addEventListener('change', filterEmergencies);
     document.getElementById('departmentFilter').addEventListener('change', filterEmergencies);
+
     // Delete function
     window.Delete = function (url) {
         Swal.fire({
