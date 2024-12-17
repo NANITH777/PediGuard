@@ -21,7 +21,7 @@ namespace Pediatric_Service.Utility
             try
             {
                 var client = new SendGridClient(SendGridSecret);
-                var from = new EmailAddress("nanifulchany@gmail.com", "Pediatric_Service");
+                var from = new EmailAddress("abc@gmail.com", "Pediatric_Service");
                 var to = new EmailAddress(email);
                 var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
 
