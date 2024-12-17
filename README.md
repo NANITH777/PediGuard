@@ -11,7 +11,7 @@ The system provides an intuitive Admin Panel for administrators to manage shift 
 ### 1. Shift Management
 
 - Organized shift scheduling for pediatric assistants
-- Dedicated shifts for Emergency Pediatrics, Pediatric Intensive Care, and Pediatric Hematology/Oncology
+- Dedicated shifts for Emergencies
 - 24-hour shift tracking system
 
 ### 2. User Interfaces
@@ -120,4 +120,4 @@ dotnet run
 
 ## 👥 Contributors
 
-[Nanith] - Lead Developer
+[[Nanith](https://github.com/NANITH777)] - Lead Developer
