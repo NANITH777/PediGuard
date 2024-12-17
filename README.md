@@ -2,13 +2,15 @@
 
 ## 🏥 Project Overview
 
-PediGuard is a comprehensive web application designed to streamline shift management and communication within a pediatric department, addressing complex organizational challenges for medical assistants and faculty.
+PediGuard is a comprehensive web application designed to streamline shift management and communication within a pediatric department, addressing complex organizational challenges for medical assistants and faculty. By automating and centralizing key processes such as on-call scheduling, department management, and emergency communication, PediGuard aims to improve efficiency and coordination across the pediatric team.
+
+The system provides an intuitive Admin Panel for administrators to manage shift schedules, faculty details, department overviews, and emergency notifications. This data is seamlessly integrated into the User Panel, where medical assistants and faculty members can access relevant information, book appointments, and stay informed about urgent updates.
 
 ## 🌟 Key Features
 
 ### 1. Shift Management
 
-- Organized shift scheduling for 15 pediatric assistants
+- Organized shift scheduling for pediatric assistants
 - Dedicated shifts for Emergency Pediatrics, Pediatric Intensive Care, and Pediatric Hematology/Oncology
 - 24-hour shift tracking system
 
